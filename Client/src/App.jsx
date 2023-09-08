@@ -11,6 +11,7 @@ import {
 import Cart from './Components/Cart/Cart'
 import Homepage from './pages/homepage'
 import Product from './Components/Products/Products'
+import MenProduct from './Components/ProductList/MenProduct'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
 <Route path = "/"  element = {<Homepage/>}/>
   <Route path = "/ShowCart" element = {<Cart/>}/> 
   <Route path = "/Product/:id" element = {<Product/>}/>
+  <Route path ="/Men's Fashion" element = {<MenProduct/>}/>
  </Routes>
 
   

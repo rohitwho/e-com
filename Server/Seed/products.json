@@ -1,0 +1,35 @@
+[
+    {
+      "productName": "Men's Classic Shirt",
+      "productImages": "image1.jpg",
+      "productDescription": "A timeless classic shirt for men.",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 29.99
+    },
+    {
+      "productName": "Men's Casual Jeans",
+      "productImages": "image2.jpg",
+      "productDescription": "Comfortable and stylish jeans for everyday wear.",
+      "productRating": 4.2,
+      "productCategory": "Jeans",
+      "productPrice": 39.99
+    },
+    {
+      "productName": "Men's Leather Belt",
+      "productImages": "image3.jpg",
+      "productDescription": "High-quality leather belt to complete your outfit.",
+      "productRating": 4.7,
+      "productCategory": "Accessories",
+      "productPrice": 19.99
+    },
+    {
+      "productName": "Men's Running Shoes",
+      "productImages": "image4.jpg",
+      "productDescription": "Durable running shoes for active men.",
+      "productRating": 4.4,
+      "productCategory": "Footwear",
+      "productPrice": 59.99
+    }
+  ]
+  

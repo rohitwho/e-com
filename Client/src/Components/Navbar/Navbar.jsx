@@ -3,9 +3,16 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem,  Avatar,NavbarMenuToggle
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
+ import {useSelector} from 'react-redux'
+ import {selectCount} from '../../../slice/cartSlice' 
+ import store from '../../../store/store'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+//     const count = selectCount(store.getState())
+// console.log(count)
+const totalCount = useSelector(selectCount)
+// console.log(to);
 
     const menuItems = [
       "Profile",
@@ -41,8 +48,8 @@ function Header() {
                   <p className="font-bold text-inherit">ACME</p>
                 </NavbarBrand>
                 <NavbarItem>
-                  <Link color="foreground" href="#">
-                    Features
+                  <Link color="foreground" to="/">
+                    Home
                   </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
@@ -63,7 +70,7 @@ function Header() {
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
                 <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
                  
-                  <Link to = "/ShowCart"> <Badge color="danger" content={2} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
+                  <Link to = "/ShowCart"> <Badge color="danger" content={totalCount} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
               <NavbarMenu>
