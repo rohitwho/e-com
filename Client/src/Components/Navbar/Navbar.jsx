@@ -4,64 +4,70 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
  import {useSelector} from 'react-redux'
- import {selectCount} from '../../../slice/cartSlice' 
+ import {addToCart, selectCount} from '../../../slice/cartSlice' 
+ import logo from '../../assets/HomePage/1.jpeg'
  import store from '../../../store/store'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 //     const count = selectCount(store.getState())
 // console.log(count)
-const totalCount = useSelector(selectCount)
-// console.log(to);
+const totalCount = useSelector(selectCount);
+console.log(totalCount);
+// const quantity = totalCount[0].quantity 
+// console.log(quantity);
 
     const menuItems = [
       "Profile",
       "Dashboard",
-      "Activity",
+      "Shop All Brands",
       "Analytics",
       "System",
-      "Deployments",
-      "My Settings",
-      "Team Settings",
-      "Help & Feedback",
-      "Log Out",
+     
     ];
     return (
         <div>
             <Navbar
               isBordered
+              isBlurred
               isMenuOpen={isMenuOpen}
               onMenuOpenChange={setIsMenuOpen}
             >
               <NavbarContent className="sm:hidden" justify="start">
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
+                  
               </NavbarContent>
               <NavbarContent className=" hidden sm:hidden pr-3" justify="center">
                 <NavbarBrand>
-                  {/* <AcmeLogo /> */}
-                  <p className="font-bold text-inherit">ACME</p>
+ <img src={logo} alt="" />
+                  
                 </NavbarBrand>
               </NavbarContent>
               <NavbarContent className=" sm:flex gap-4" justify="center">
                 <NavbarBrand>
-                  {/* <AcmeLogo /> */}
-                  <p className="font-bold text-inherit">ACME</p>
+
+                <Link to="/">
+                  
+                <img className='logo' src={logo} alt="" />
+                  </Link>
+             
+                  
                 </NavbarBrand>
-                <NavbarItem>
+                {/* <NavbarItem>
                   <Link color="foreground" to="/">
                     Home
                   </Link>
-                </NavbarItem>
-                <NavbarItem isActive>
-                  <Link href="#" aria-current="page">
-                    Customers
+                </NavbarItem> */}
+                {/* <NavbarItem isActive>
+                  <Link href="/" aria-current="page">
+                   Shop Brands
                   </Link>
                 </NavbarItem>
                 <NavbarItem>
                   <Link color="foreground" href="#">
                     Integrations
                   </Link>
-                </NavbarItem>
+                </NavbarItem> */}
               </NavbarContent>
               <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
@@ -70,7 +76,7 @@ const totalCount = useSelector(selectCount)
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
                 <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
                  
-                  <Link to = "/ShowCart"> <Badge color="danger" content={totalCount} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
+                  <Link to = "/ShowCart"> <Badge color="danger" content={1} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
               <NavbarMenu>

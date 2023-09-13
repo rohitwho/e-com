@@ -1,12 +1,11 @@
 const { model, Schema } = require("mongoose");
 
-
 const productSchema = new Schema({
   productName: {
     type: String,
   },
-  productImages:{
-    type:String
+  productImages: {
+    type: String,
   },
   productDescription: {
     type: String,
@@ -22,7 +21,7 @@ const productSchema = new Schema({
   },
   createdAt: {
     type: Date,
-    default:Date.now
+    default: Date.now,
   },
 });
 const ProductList = model("ProductList", productSchema);

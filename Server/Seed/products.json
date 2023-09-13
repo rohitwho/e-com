@@ -1,35 +1,82 @@
 [
     {
-      "productName": "Men's Classic Shirt",
-      "productImages": "image1.jpg",
-      "productDescription": "A timeless classic shirt for men.",
+      "productName": "Retro Funny Cartoon Cat Print T-Shirt",
+      "productImages": "tees1.avif",
+      "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 89.99
+    },
+    {
+      "productName": "Urbanistic Vintage T-Shirt",
+      "productImages": "hip.avif",
+      "productDescription": "Urbanistic Vintage T-Shirt, Retro Dinosaur Print Tee, Harajuku Classic Streetwear Shirt, Hip Hop Old School T-Shirt",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 49.99
+    },
+    {
+      "productName": "Classic Vintage Striped T-Shirt",
+      "productImages": "classic.jpg",
+      "productDescription": "Classic Vintage Striped T-Shirt, Loose High Street Tee, Harajuku Korean Style Urbanistic Pullover, Casual Y2K Grunge Shirt, Summer O Neck Tee",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 59.99
+    },
+    {
+      "productName": "Classic Vintage Striped T-Shirt",
+      "productImages": "classic2.jpg",
+      "productDescription": "Classic Vintage Striped T-Shirt, Loose High Street Tee, Harajuku Korean Style Urbanistic Pullover, Casual Y2K Grunge Shirt, Summer O Neck Tee",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 59.99
+    },
+    {
+      "productName": "Summer Men Cotton T-Shirt",
+      "productImages": "cartoon.jpg",
+      "productDescription": "Summer Men Cotton T-Shirt Funny Cartoon Fashion Oversized Short Sleeved Anime Casual T-Shirt Streetwear Tops Tees S-8XL,Street Hip Hop Shirt",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 59.99
+    },
+    {
+      "productName": "Japanese Retro Oversized T-shirt",
+      "productImages": "japanese.avif",
+      "productDescription": "Japanese Retro Oversized T-shirt, Print Tee Shirt, Japan Street Style Cotton Unisex Tee, Harajuku Kanji Top",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 49.99
+    },
+    {
+      "productName": "Tyler Nostalgia Y2k Graphic T-Shirt",
+      "productImages": "tyler.avif",
+      "productDescription": "Tyler Nostalgia Y2k Graphic T-Shirt, Vintage 90s Inspired Custom Tee, Unisex Retro Shirt",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 39.99
+    },
+    {
+      "productName": "Vinland Tee",
+      "productImages": "vinland.avif",
+      "productDescription": "Vinland Tee,Thorfinn,Viking Tshirt,Street Wear Shirt,Vintage Tee,Personalized Shirt,Trendy Shirt,Retro Street Trend Shirt, Aesthetic Tees",
       "productRating": 4.5,
       "productCategory": "Shirts",
       "productPrice": 29.99
     },
     {
-      "productName": "Men's Casual Jeans",
-      "productImages": "image2.jpg",
-      "productDescription": "Comfortable and stylish jeans for everyday wear.",
-      "productRating": 4.2,
-      "productCategory": "Jeans",
-      "productPrice": 39.99
+      "productName": "Men's Classic Shirt",
+      "productImages": "image1.jpg",
+      "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 29.99
     },
     {
-      "productName": "Men's Leather Belt",
-      "productImages": "image3.jpg",
-      "productDescription": "High-quality leather belt to complete your outfit.",
-      "productRating": 4.7,
-      "productCategory": "Accessories",
-      "productPrice": 19.99
-    },
-    {
-      "productName": "Men's Running Shoes",
-      "productImages": "image4.jpg",
-      "productDescription": "Durable running shoes for active men.",
-      "productRating": 4.4,
-      "productCategory": "Footwear",
-      "productPrice": 59.99
+      "productName": "Men's Classic Shirt",
+      "productImages": "image1.jpg",
+      "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
+      "productRating": 4.5,
+      "productCategory": "Shirts",
+      "productPrice": 29.99
     }
-  ]
-  
+   ]

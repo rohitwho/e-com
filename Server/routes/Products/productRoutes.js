@@ -1,5 +1,5 @@
 const route = require("express").Router();
-const ProductList  = require("../../models/products");
+const ProductList = require("../../models/products");
 
 route.get("/men'sProducts", async (req, res) => {
   try {
@@ -9,13 +9,19 @@ route.get("/men'sProducts", async (req, res) => {
     console.log(err);
   }
 });
-route.get("/Product/:id",async (req,res)=>{
-  try{
-    const findOne = await ProductList.findById(req.query.id)
-    res.json(findOne)
+route.get("/MenProduct/:id", async (req, res) => {
+  try {
+    const product = await ProductList.findById(req.params.id);
 
-  }catch(err){
-    console.log(err)
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.json(product);
+  } catch (err) {
+    console.error(err);
+
+    res.status(500).json({ error: "Internal Server Error" });
   }
-})
+});
 module.exports = route;
