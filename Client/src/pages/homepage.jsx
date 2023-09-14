@@ -1,138 +1,109 @@
 import { useEffect, useState } from "react";
-import Deals from "../Components/Hero/Deals";
-import axios from "axios";
-import { Button, Card, CardFooter, Image } from "@nextui-org/react";
-import { useDispatch } from "react-redux";
-import { addToCart, setSelectedProduct } from "../../slice/cartSlice";
+
+import { Button } from "@nextui-org/react";
+
 import { Link } from "react-router-dom";
 import homepageImage from "../assets/HomePage/Homepage.png";
-
+import Men from "../assets/HomePage/men.png";
+import Women from "../assets/HomePage/women2.jpeg";
+import Accessories from "../assets/HomePage/2.png";
+import Flash from "../assets/HomePage/flash.png";
+import Form from '../Components/FormInput/Form'
 function homepage() {
-  const dispatch = useDispatch();
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const fetchProducts = async () => {
-      await axios
-        .get("https://fakestoreapi.com/products")
-        .then(function (response) {
-          setProducts(response.data);
-        })
-
-        .catch((error) => {
-          console.error("Error fetching products:", error);
-          throw error;
-        });
-    };
-    fetchProducts();
-  }, []);
-  function handleCart(list) {
-    dispatch(addToCart(list));
-    dispatch(setSelectedProduct(list.id));
-  }
-
-  const category = [
-    {
-      id: 1,
-      categoryName: "Men",
-      link: "/Men's Fashion",
-      image: homepageImage,
-      alt: "A Picture of a Male Model",
-    },
-    {
-      id: 2,
-      categoryName: "Women",
-      link: "/WomenFashion",
-      image: homepageImage,
-      alt: "A Picture of a Male Model",
-    },
-    {
-      id: 3,
-      categoryName: "Kid's",
-      link: "/Men's Fashion",
-      image: homepageImage,
-      alt: "A Picture of a Male Model",
-    },
-    {
-      id: 4,
-      categoryName: "Gadgets",
-      link: "/Men's Fashion",
-      image: homepageImage,
-      alt: "A Picture of a Male Model",
-    },
-  ];
-
   return (
-    <div>
+    <main>
       <img
         className=" w-full object-cover transition-height max-h-min"
         src={homepageImage}
       ></img>
+      <div style={{ marginInline: "2%" }}>
+        <h1 className="homepage">Shop By Category</h1>
 
-      <h1 className="homepage">Shop Latest Fashion By Category</h1>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "2fr 1fr ",
-          margin: "2%",
-          gap:"10px"
-        }}
-      >
-        <div className="WomenSection">
+        <main style={{ backgroundColor: "rgb(204 208 214)" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "2fr 1fr  ",
 
-        </div>
-        <div className="MenSection">
-        <Link to = "/Men's Fashion"><Button>Shop</Button></Link>  
-        </div>
-        
-
-   
-      </div>
-      <div className="KidSection"></div>
-
-      <h1 className="homepage">Deal of the day</h1>
-      <section className="HomeView">
-        {products?.map((list) => (
-          <div key={list.id} className="HomeviewCard">
-            <Link to={`/Product/${list.id}`}>
-              {" "}
-              <Deals
-                category={list.category}
-                rating={list.rating}
-                description={list.description}
-                image={list.image}
-                title={list.title}
-                price={list.price}
-              ></Deals>
-            </Link>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Button
-                className="inp"
-                onClick={() => handleCart(list)}
-                color="warning"
-              >
-                Add To Cart
-              </Button>
-              <Link to={`/Product/${list.id}`}>
-                <Button className="gap-2" color="primary">
-                  View
-                </Button>
+              gap: "10px",
+            }}
+          >
+            <div className="MenSection">
+              <Link to="/Men's Fashion">
+                <img src={Men} alt="" />
+              </Link>
+            </div>
+            <div className="WomenSection">
+              <Link to="/WomenFashion">
+                <img style={{ width: "100%" }} src={Women} alt="" />
               </Link>
             </div>
           </div>
-        ))}
-      </section>
-    </div>
+          <div className="Accessories">
+            <Link to="Accessories">
+              <img style={{ width: "100%" }} src={Accessories} alt="" />
+            </Link>
+          </div>
+        </main>
+
+        {/* <h1 className="homepage">Deal of the day</h1> */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr ",
+            backgroundColor: "#feb14d",
+            // height:"600px",
+            gap: "10px",
+          }}
+        >
+          <div className="GridColumns">
+            <img className="GridColumImage" src={Flash} alt="" />
+          </div>
+          <div className="GridColumns">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
+              sint!
+            </p>
+            <Link to="Deals">
+              <Button>Shop</Button>
+            </Link>
+          </div>
+        </div>
+
+        <div style={{width:"50%"}}>
+          <Form
+          inputType="text"
+          placeholdertext="hello"
+          labelFor="FirstName"
+          inputLabel="Full Name"
+          in
+
+          />
+          
+           <Form
+          inputType="email"
+          placeholdertext="hello"
+          labelFor="Email"
+          inputLabel="Email:"
+          in
+
+          /> <Form
+          inputType="text"
+          placeholdertext="hello"
+          labelFor="Message"
+          inputLabel="Message:"
+          in
+
+          />
+          <aside style={{display:"flex",justifyContent:"flex-end"}}>  <button>Send</button></aside>
+        </div>
+      </div>
+    </main>
   );
 }
 
 export default homepage;
-
 
 // {category?.map((home) => (
 //   <div key={home.id} style={{ marginInline: "2%" }}>

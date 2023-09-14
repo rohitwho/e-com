@@ -76,7 +76,7 @@ console.log(totalCount);
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
                 <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
                  
-                  <Link to = "/ShowCart"> <Badge color="danger" content={1} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
+                  <Link to = "/ShowCart"> <Badge color="danger" content="" shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
               <NavbarMenu>

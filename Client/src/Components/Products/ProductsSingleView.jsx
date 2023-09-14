@@ -94,7 +94,7 @@ function Products() {
          fullWidth
          variant="ghost"
          onClick={() => {
-           dispatch(addToCart());
+           dispatch(addToCart(singleProduct));
            dispatch(setSelectedProduct(singleProduct._id));
          }}
          color="warning"
@@ -132,8 +132,8 @@ function Products() {
        fullWidth
        variant="ghost"
        onClick={() => {
-         dispatch(addToCart());
-         dispatch(setSelectedProduct(externalApi._id));
+         dispatch(addToCart(singleProduct));
+         dispatch(setSelectedProduct(singleProduct._id));
        }}
        color="warning"
      >
@@ -185,7 +185,7 @@ function Products() {
                   fullWidth
                   variant="ghost"
                   onClick={() => {
-                    dispatch(addToCart());
+                    dispatch(addToCart(externalApi));
                     dispatch(setSelectedProduct(externalApi.id));
                   }}
                   color="warning"
@@ -222,7 +222,7 @@ function Products() {
                 fullWidth
                 variant="ghost"
                 onClick={() => {
-                  dispatch(addToCart());
+                  dispatch(addToCart(externalApi));
                   dispatch(setSelectedProduct(externalApi.id));
                 }}
                 color="warning"
