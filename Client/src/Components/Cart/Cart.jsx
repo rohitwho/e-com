@@ -8,12 +8,15 @@ import {
 
 } from "../../../slice/cartSlice";
 import { useEffect, useState } from "react";
+import Lottie from "lottie-react";
+import EmptyCart from '../../assets/Animations/EmptyCart.json'
 import axios from "axios";
 
 function Cart() {
   const dispatch = useDispatch();
   const emptyCart = useSelector(selectSelectedProduct);
-  const totalCart = useSelector(selectSelectedProduct);
+
+
 
   const [checkoutItem, setCheckoutItem] = useState([]);
   const cartItems = useSelector(selectCount)
@@ -40,7 +43,7 @@ function Cart() {
     <div className="form">
     
       {emptyCart === null ? (
-        <h1>Your cart is empty</h1>
+    <Lottie animationData={EmptyCart}></Lottie>
       ) : (
         <div className="check">
           {checkoutItem?.map((item) => (

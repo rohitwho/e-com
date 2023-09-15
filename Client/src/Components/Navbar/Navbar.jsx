@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem,  Avatar,NavbarMenuToggle,NavbarMenu,NavbarMenuItem,Badge} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, AvatarIcon, Avatar,NavbarMenuToggle,NavbarMenu,NavbarMenuItem,Badge} from "@nextui-org/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
@@ -18,11 +18,13 @@ console.log(totalCount);
 // console.log(quantity);
 
     const menuItems = [
-      "Profile",
-      "Dashboard",
-      "Shop All Brands",
-      "Analytics",
-      "System",
+      {id:1,menuItemName:'Dashboard',Link:"/"},
+      {id:2,menuItemName:'Shop New Deals',Link:"/Deals"},
+      {id:3,menuItemName:'Shop Men',Link:"/Men's Fashion"},
+      {id:4,menuItemName:'Shop Women',Link:"/"},
+      {id:5,menuItemName:'Accessories',Link:"/"},
+     
+   
      
     ];
     return (
@@ -37,60 +39,43 @@ console.log(totalCount);
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
                   
               </NavbarContent>
-              <NavbarContent className=" hidden sm:hidden pr-3" justify="center">
-                <NavbarBrand>
- <img src={logo} alt="" />
-                  
-                </NavbarBrand>
-              </NavbarContent>
+         
               <NavbarContent className=" sm:flex gap-4" justify="center">
                 <NavbarBrand>
 
                 <Link to="/">
                   
-                <img className='logo' src={logo} alt="" />
+                <h1 className='logo' >Shop All</h1>
                   </Link>
              
                   
                 </NavbarBrand>
-                {/* <NavbarItem>
-                  <Link color="foreground" to="/">
-                    Home
-                  </Link>
-                </NavbarItem> */}
-                {/* <NavbarItem isActive>
-                  <Link href="/" aria-current="page">
-                   Shop Brands
-                  </Link>
-                </NavbarItem>
-                <NavbarItem>
-                  <Link color="foreground" href="#">
-                    Integrations
-                  </Link>
-                </NavbarItem> */}
+            
               </NavbarContent>
               <NavbarContent justify="end">
                 <NavbarItem className="hidden lg:flex">
                   <Link href="#">Login</Link>
                 </NavbarItem>
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
-                <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" />
+                {/* <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" /> */}
+                <Avatar
+        icon={<AvatarIcon />}
+        classNames={{
+          base: "transparent",
+          icon: "text-black/80",
+        }}
+      />
                  
                   <Link to = "/ShowCart"> <Badge color="danger" content="" shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
               <NavbarMenu>
-                {menuItems.map((item, index) => (
-                  <NavbarMenuItem key={`${item}-${index}`}>
+                {menuItems.map((item) => (
+                  <NavbarMenuItem key={item.id}>
                     <Link
-                      className="w-full"
-                      color={
-                        index === 2 ? "warning" : index === menuItems.length - 1 ? "danger" : "foreground"
-                      }
-                      href="#"
-                      size="lg"
+                to={item.Link}
                     >
-                      {item}
+                      {item.menuItemName}
                     </Link>
                   </NavbarMenuItem>
                 ))}

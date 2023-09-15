@@ -26,15 +26,17 @@ function MenProduct() {
     <div className="ProductMain">
       {products?.map((list) => (
         <div key={list._id} className="Product">
+           <Link to={`/Product/${list._id}`}>
           <Product
             source={`./src/assets/HomePage/${list.productImages}`}
             productName={list.productName}
-            rating={list.productRating}
+  
             price={list.productPrice}
           ></Product>
+          </Link>
 
           <div className="mt-2">
-            <Button
+            <Button variant="ghost" fullWidth
               onClick={() => {
                 dispatch(addToCart(list));
               }}
@@ -43,11 +45,7 @@ function MenProduct() {
             >
               Add To Cart
             </Button>
-            <Link to={`/Product/${list._id}`}>
-              <Button className="mr-2" color="primary">
-                View
-              </Button>
-            </Link>
+        
           </div>
         </div>
       ))}

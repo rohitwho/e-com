@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Great+Vibes&family=Julius+Sans+One&family=Kaushan+Script&family=Montserrat:wght@200;300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poiret+One&family=Sacramento&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,13 +22,21 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --h1Font: 2rem;
+  --font3rem:3rem;
+  --font1rem:1rem;
+  --font1-5rem:1.5rem;
+  --font-light:white
+  --font-Great Vibes:'Great Vibes', cursive;
+  --font-JuliusSansOne:'Julius Sans One', cursive;
+  --font-PoiretOne:'Poiret One', cursive;
+  --font-Sacramento:'Sacramento', cursive;
+  --font-PlayfairDisplay: 'Playfair Display', cursive;
+  --font-KaushanScript: 'Kaushan Script', cursive;
+  --fontColor:#242424;
+
 }
 
-a {
-  font-weight: 500;
-  /* color: #646cff; */
-  text-decoration: inherit;
-}
+
 a:hover {
   color: #535bf2;
 }
@@ -56,9 +68,14 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 .logo {
-  width: 7rem;
+  /* width: 7rem; */
+  font-family: var(--font-KaushanScript);
+  font-size: var(--h1Font);
+  color: var(--fontColor);
+
 }
 .homepage {
+  font-family: var(--font-PlayfairDisplay);
   display: flex;
   justify-content: flex-start;
   margin: 2%;
@@ -70,21 +87,27 @@ button:focus-visible {
   grid-template-columns: 1fr;
   margin-inline: 2%;
 }
-.WomenSection {
 
- 
-
-}
 .MenSection{
   display: flex;
   align-items: center;
 
 }
 .Accessories {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 margin-top: 2%;
 width: 100%;
+background-color: #f3efe3;
 
 
+}
+.GridContainer{
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: #feb14d;
+  /* // height:"600px", */
+  gap: 10px;
 }
 .GridColumns {
   display: flex;
@@ -97,7 +120,19 @@ width: 100%;
   /* height:500px; */
   /* border:1px solid black */
 }
+.GridColumns >h1{
+  font-size: var(--font1-5rem);
+  font-family: var(--font-PlayfairDisplay);
+
+  padding: 1%;
+}
+.GridColumns > p{
+  padding: 1%;
+  font-size: var(--font1rem);
+  font-family: var(--font-PlayfairDisplay);
+}
 .GridColumImage{
+  display:none;
   height:500px
 }
 .deals {
@@ -146,6 +181,10 @@ width: 100%;
 
   margin: 2%;
 }
+.ProductH1{
+  font-family: var(--font-PlayfairDisplay);
+  font-weight: 600;
+}
 .ProductSingleViewCard {
   display: flex;
   flex-direction: column;
@@ -162,14 +201,34 @@ width: 100%;
 }
 .SingleViewCategory {
   border-bottom: inset;
+  font-family: var(--font-PlayfairDisplay);
+  font-weight: 700;
+  font-size: var(--h1Font);
 
   padding: 2%;
+}
+.ProductDes{
+  font-family: var(--font-JuliusSansOne);
+  font-size: var(--font1-5rem);
+  font-weight: 600;
+}
+.productSize{
+  font-family: var(--font-JuliusSansOne);
+  font-size: var(--font1rem);
+}
+.ReviewContainer{
+  font-family: var(--font-PlayfairDisplay);
 }
 .SingleViewDescription {
   text-transform: capitalize;
   border-bottom: inset;
   padding: 1%;
+  font-family: var(--font-PlayfairDisplay);
+  font-size: 1.7rem;
 
+}
+span{
+font-size:var(--font1rem);
 }
 .ReviewContainer {
 
@@ -195,6 +254,11 @@ justify-content: space-evenly;
 .checkout {
   width: 100%;
   margin-inline: 2%;
+  padding:2%;
+}
+.checkout >h1{
+  font-family: var(--font-JuliusSansOne);
+  font-size: var(--h1Font);
 }
 
 .inp {
@@ -223,26 +287,69 @@ span {
   width: 100%;
   overflow: scroll;
 }
+.DealsH1{
+  font-size: var(--h1Font);
+}
+.ContactUs{
+background-color: #242424;
+color: #f9f9f9;
+
+}
+.ContactUSH1 {
+  padding: 3%;
+  display: flex;
+  justify-content: flex-start;
+  font-size: var(--h1Font);
+  font-family: var(--font-JuliusSansOne);
+  
+ 
+}
+.ContactUSForm{
+  /* border: 1px solid white; */
+  padding: 2%;
+  width:100%;
+
+
+}
+.ContactImage{
+  display:none
+
+}
+.ContactBundle{
+display: flex;
+justify-content: space-evenly;
+}
 .Form-Label{
 width:12%
 }
 .Form{
   display: flex;
-  justify-content: center;  
+  justify-content: 
+  space-around;  
     align-items: center;
     gap:10px;
     padding: 1%;
+  
     
 }
 .Form > textarea{
-  width:50%;
+  width:100%;
+  color: #1a1a1a;
+
+  
+}
+.SendButton{
+  /* border:1px solid white; */
+  background-color: #1a1a1a;
+  padding: 2% 10%;
 }
 .footerMain {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #d4dde4;
+  background-color: #bebdbd;
   padding: 2%;
   width: 100%;
+  color: #1a1a1a;
 }
 
 @media only screen and (min-width: 600px) {
@@ -277,6 +384,27 @@ width:12%
   .form{
     flex-direction: row;
   }
+  .ContactImage{
+    display: block;
+    width:70%;
+  
+}
+.ContactUSForm{
+  width:100%
+}
+.GridContainer{
+  grid-template-columns: 1fr 1fr;
+}
+.GridColumImage{
+  display: inline;
+}
+.GridColumns >h1{
+font-size: var(--font3rem);
+}
+.GridColumns>p{
+font-size: var(--font1-5rem);
+
+}
 }
 @media only screen and (min-width: 1220px) {
   .HomeView {
@@ -303,7 +431,7 @@ width:12%
   }
 }
 
-@media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: dark) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -313,5 +441,8 @@ width:12%
   }
   button {
     background-color: #f9f9f9;
+  }
+  .logo{
+    color: #242424;
   }
 }

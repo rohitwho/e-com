@@ -6,9 +6,9 @@ function Products({source,productName,rating,price}) {
 <>
 
 <img  className="productImage" src = {source}/>
-<h1 className="text-lg font-semibold">{productName}</h1>
-<span>Rating: {rating}</span>
-<span>Price: ${price}</span>
+<h1 className="ProductH1">{productName}</h1>
+{/* <span className='ProductRating'> {rating}</span> */}
+<span> ${price}</span>
 
 </>
 

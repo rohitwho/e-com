@@ -62,7 +62,7 @@ function Products() {
 
        <>
          {" "}
-         <p style={{padding:"2%"}}>Sizes:</p>
+         <p  className="productSize"style={{padding:"2%"}}>Sizes:</p>
          <div className="ButtonGroup">
            <ButtonGroup variant="ghost" color="primary">
              <Button value="XS">XS</Button>
@@ -74,7 +74,7 @@ function Products() {
        </>
 
 
-     <h2>Product Description:</h2>
+     <h2 className="ProductDes">Product Description:</h2>
      <p className="SingleViewDescription">
        {" "}
        {singleProduct.productDescription}{" "}

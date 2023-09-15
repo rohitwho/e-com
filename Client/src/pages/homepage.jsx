@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-
-import { Button } from "@nextui-org/react";
 
 import { Link } from "react-router-dom";
 import homepageImage from "../assets/HomePage/Homepage.png";
 import Men from "../assets/HomePage/men.png";
 import Women from "../assets/HomePage/women2.jpeg";
-import Accessories from "../assets/HomePage/2.png";
+import Accessories from "../assets/HomePage/2.jpeg";
 import Flash from "../assets/HomePage/flash.png";
-import Form from '../Components/FormInput/Form'
+import Form from "../Components/FormInput/Form";
+import Details from "../assets/HomePage/Details.png";
+import Lottie from "lottie-react";
+import Contact from "../assets/Animations/ContactAnimation.json";
 function homepage() {
   return (
     <main>
@@ -16,6 +16,9 @@ function homepage() {
         className=" w-full object-cover transition-height max-h-min"
         src={homepageImage}
       ></img>
+
+
+      
       <div style={{ marginInline: "2%" }}>
         <h1 className="homepage">Shop By Category</h1>
 
@@ -40,64 +43,92 @@ function homepage() {
             </div>
           </div>
           <div className="Accessories">
-            <Link to="Accessories">
-              <img style={{ width: "100%" }} src={Accessories} alt="" />
+            
+            <div className="GridColumns">
+            <h1 >From Me To Me</h1>
+            <p className="DealsP">
+           Jwelery to Give Yourself For Reaching The Personal Goals.
+            </p>
+            <Link className="SendButton" to="/Accessories">
+            <button  style={{background:"transparent",color:"white"}}>Shop Now</button>
             </Link>
+
+            </div>
+            <div>  <Link to="/Accessories">
+              <img style={{ width: "100%" }} src={Accessories} alt="" />
+            </Link></div>
           </div>
         </main>
 
-        {/* <h1 className="homepage">Deal of the day</h1> */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr ",
-            backgroundColor: "#feb14d",
-            // height:"600px",
-            gap: "10px",
-          }}
+   
+        <div className="GridContainer"
+        
         >
           <div className="GridColumns">
             <img className="GridColumImage" src={Flash} alt="" />
           </div>
           <div className="GridColumns">
-            <h1>Lorem ipsum dolor sit amet.</h1>
-            <p>
+            <h1 >Shop latest Deals</h1>
+            <p className="DealsP">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
               sint!
             </p>
-            <Link to="Deals">
-              <Button>Shop</Button>
+            <Link  className="SendButton"to="/Deals">
+              <button  style={{background:"transparent",color:"white"}}>Shop Now</button>
             </Link>
           </div>
         </div>
-
-        <div style={{width:"50%"}}>
-          <Form
-          inputType="text"
-          placeholdertext="hello"
-          labelFor="FirstName"
-          inputLabel="Full Name"
-          in
-
-          />
-          
-           <Form
-          inputType="email"
-          placeholdertext="hello"
-          labelFor="Email"
-          inputLabel="Email:"
-          in
-
-          /> <Form
-          inputType="text"
-          placeholdertext="hello"
-          labelFor="Message"
-          inputLabel="Message:"
-          in
-
-          />
-          <aside style={{display:"flex",justifyContent:"flex-end"}}>  <button>Send</button></aside>
+        <div>
+          <img style={{ width: "100%"}} src={Details} alt="" />
         </div>
+
+        <div className="ContactUs">
+          <aside className="ContactUSH1">
+            <h1>GET IN TOUCH</h1>
+          </aside>
+          <section className="ContactBundle">
+            <main className="ContactUSForm">
+              <Form
+                inputType="text"
+                placeholdertext="JohnSmith"
+                labelFor="FirstName"
+                inputLabel="Full Name"
+                in
+              />
+              <Form
+                inputType="email"
+                placeholdertext="JohnSmith@gmail.com"
+                labelFor="Email"
+                inputLabel="Email:"
+                in
+              />{" "}
+              <Form
+                inputType="text"
+                placeholdertext=""
+                labelFor="Message"
+                inputLabel="Message:"
+                in
+              />
+              <aside
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-end",
+                  padding: "2%",
+                }}
+              >
+                {" "}
+                <button style={{border: "1px solid white"}} className="SendButton">Send</button>
+              </aside>
+            </main>
+            <aside className=" ContactImage">
+              <Lottie
+                className=" ContactImage"
+                animationData={Contact}
+              ></Lottie>
+            </aside>
+          </section>
+        </div>
+     
       </div>
     </main>
   );
@@ -105,28 +136,3 @@ function homepage() {
 
 export default homepage;
 
-// {category?.map((home) => (
-//   <div key={home.id} style={{ marginInline: "2%" }}>
-//     <img className="productImage" src={home.image} alt="" />
-//     <div
-//       style={{
-//         display: "flex",
-//         justifyContent: "center",
-//         alignItems: "center",
-//         flexDirection: "column",
-//         width: "100%",
-//         padding: "2%",
-//       }}
-//     >
-//       <h1 style={{ fontSize: "1.5rem", textEmphasis: "ActiveBorder" }}>
-//         {" "}
-//         {home.categoryName}
-//       </h1>
-//       <Link style={{ width: "100%" }} to={home.link}>
-//         <Button fullWidth variant="ghost" color="primary" size="lg">
-//           Shop
-//         </Button>
-//       </Link>
-//     </div>
-//   </div>
-// ))}
