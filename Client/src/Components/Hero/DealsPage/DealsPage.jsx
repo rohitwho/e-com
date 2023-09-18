@@ -41,9 +41,10 @@ function DealsPage() {
           {" "}
           <Deals
             category={list.category}
-            rating={list.rating}
+            // rating={list.rating}
             description={list.description}
             image={list.image}
+          
             title={list.title}
             price={list.price}
           ></Deals>
@@ -57,16 +58,17 @@ function DealsPage() {
         >
           <Button
             className="inp"
+            variant='ghost'
             onClick={() => handleCart(list)}
             color="warning"
           >
             Add To Cart
           </Button>
-          <Link to={`/Product/${list.id}`}>
+          {/* <Link to={`/Product/${list.id}`}>
             <Button className="gap-2" color="primary">
               View
             </Button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     ))}

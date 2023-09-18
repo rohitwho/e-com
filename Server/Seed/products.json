@@ -1,82 +1,174 @@
 [
     {
+      "listType":"MEN",
       "productName": "Retro Funny Cartoon Cat Print T-Shirt",
       "productImages": "tees1.avif",
       "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
-      "productRating": 4.5,
+      "productRating": 5,
       "productCategory": "Shirts",
       "productPrice": 89.99
     },
     {
+      "listType":"MEN",
       "productName": "Urbanistic Vintage T-Shirt",
       "productImages": "hip.avif",
       "productDescription": "Urbanistic Vintage T-Shirt, Retro Dinosaur Print Tee, Harajuku Classic Streetwear Shirt, Hip Hop Old School T-Shirt",
-      "productRating": 4.5,
+      "productRating":4,
       "productCategory": "Shirts",
       "productPrice": 49.99
     },
     {
+      "listType":"MEN",
       "productName": "Classic Vintage Striped T-Shirt",
       "productImages": "classic.jpg",
       "productDescription": "Classic Vintage Striped T-Shirt, Loose High Street Tee, Harajuku Korean Style Urbanistic Pullover, Casual Y2K Grunge Shirt, Summer O Neck Tee",
-      "productRating": 4.5,
+      "productRating": 5,
       "productCategory": "Shirts",
       "productPrice": 59.99
     },
     {
+      "listType":"MEN",
       "productName": "Classic Vintage Striped T-Shirt",
       "productImages": "classic2.jpg",
       "productDescription": "Classic Vintage Striped T-Shirt, Loose High Street Tee, Harajuku Korean Style Urbanistic Pullover, Casual Y2K Grunge Shirt, Summer O Neck Tee",
-      "productRating": 4.5,
+      "productRating": 4,
       "productCategory": "Shirts",
       "productPrice": 59.99
     },
     {
+      "listType":"MEN",
       "productName": "Summer Men Cotton T-Shirt",
       "productImages": "cartoon.jpg",
       "productDescription": "Summer Men Cotton T-Shirt Funny Cartoon Fashion Oversized Short Sleeved Anime Casual T-Shirt Streetwear Tops Tees S-8XL,Street Hip Hop Shirt",
-      "productRating": 4.5,
+      "productRating": 3,
       "productCategory": "Shirts",
       "productPrice": 59.99
     },
     {
+      "listType":"MEN",
       "productName": "Japanese Retro Oversized T-shirt",
       "productImages": "japanese.avif",
       "productDescription": "Japanese Retro Oversized T-shirt, Print Tee Shirt, Japan Street Style Cotton Unisex Tee, Harajuku Kanji Top",
-      "productRating": 4.5,
+      "productRating": 3,
       "productCategory": "Shirts",
       "productPrice": 49.99
     },
     {
+      "listType":"MEN",
       "productName": "Tyler Nostalgia Y2k Graphic T-Shirt",
       "productImages": "tyler.avif",
       "productDescription": "Tyler Nostalgia Y2k Graphic T-Shirt, Vintage 90s Inspired Custom Tee, Unisex Retro Shirt",
-      "productRating": 4.5,
+      "productRating": 5,
       "productCategory": "Shirts",
       "productPrice": 39.99
     },
     {
+      "listType":"MEN",
       "productName": "Vinland Tee",
       "productImages": "vinland.avif",
       "productDescription": "Vinland Tee,Thorfinn,Viking Tshirt,Street Wear Shirt,Vintage Tee,Personalized Shirt,Trendy Shirt,Retro Street Trend Shirt, Aesthetic Tees",
-      "productRating": 4.5,
+      "productRating": 4,
       "productCategory": "Shirts",
       "productPrice": 29.99
     },
+    {"listType":"WOMEN",
+      "productName": "High-Waisted Skinny Jeans",
+      "productImages": "high-waist-jeans.jpg",
+      "productDescription": "Classic High-Waisted Skinny Jeans for Women, Stretch Denim, Available in Various Sizes and Washes",
+      "productRating": 4.8,
+      "productCategory": "Jeans",
+      "productPrice": 69.99
+    },
     {
-      "productName": "Men's Classic Shirt",
-      "productImages": "image1.jpg",
-      "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
-      "productRating": 4.5,
-      "productCategory": "Shirts",
+      "listType":"WOMEN",
+      "productName": "Lace Trim Camisole",
+      "productImages": "lace-camisole.jpg",
+      "productDescription": "Elegant Lace Trim Camisole for Women, Soft and Comfortable, Ideal for Layering or Sleepwear",
+      "productRating": 4.3,
+      "productCategory": "Tops",
       "productPrice": 29.99
     },
     {
-      "productName": "Men's Classic Shirt",
-      "productImages": "image1.jpg",
-      "productDescription": "Retro Funny Cartoon Cat Print T-Shirt, Casual Fashion Street Short Sleeve Hip Hop Shirt, Funny Animal Pet Cat Meme Tee, Summer O Neck Tee",
+      "listType":"WOMEN",
+      "productName": "Leather Biker Jacket",
+      "productImages": "leather-jacket.jpg",
+      "productDescription": "Stylish Leather Biker Jacket for Women, Zip Closure, Multiple Pockets, Edgy and Fashionable",
+      "productRating": 4.6,
+      "productCategory": "Outerwear",
+      "productPrice": 119.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Boho Maxi Skirt",
+      "productImages": "boho-maxi-skirt.jpg",
+      "productDescription": "Bohemian Style Maxi Skirt for Women, Floral Print, Flowy and Comfortable, Perfect for Summer",
+      "productRating": 4.2,
+      "productCategory": "Skirts",
+      "productPrice": 54.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Striped Sweater Dress",
+      "productImages": "striped-sweater-dress.jpg",
+      "productDescription": "Striped Sweater Dress for Women, Long Sleeves, Cozy and Warm, Suitable for Fall and Winter",
+      "productRating": 4.4,
+      "productCategory": "Dresses",
+      "productPrice": 49.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Printed Silk Scarf",
+      "productImages": "silk-scarf.jpg",
+      "productDescription": "Elegant Printed Silk Scarf for Women, Versatile and Stylish, Adds a Touch of Luxury to Any Outfit",
+      "productRating": 4.7,
+      "productCategory": "Accessories",
+      "productPrice": 34.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Cotton Blend Leggings",
+      "productImages": "cotton-leggings.jpg",
+      "productDescription": "Comfortable Cotton Blend Leggings for Women, Perfect for Active or Casual Wear, Multiple Colors Available",
       "productRating": 4.5,
-      "productCategory": "Shirts",
-      "productPrice": 29.99
+      "productCategory": "Pants",
+      "productPrice": 24.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Off-Shoulder Blouse",
+      "productImages": "off-shoulder-blouse.jpg",
+      "productDescription": "Stylish Off-Shoulder Blouse for Women, Flowy and Feminine, Ideal for Summer and Special Occasions",
+      "productRating": 4.6,
+      "productCategory": "Tops",
+      "productPrice": 39.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Quilted Crossbody Bag",
+      "productImages": "quilted-crossbody-bag.jpg",
+      "productDescription": "Quilted Crossbody Bag for Women, Compact and Stylish, Perfect for Carrying Essentials",
+      "productRating": 4.4,
+      "productCategory": "Bags",
+      "productPrice": 49.99
+    },
+    {
+      "listType":"WOMEN",
+      "productName": "Knit Cardigan Sweater",
+      "productImages": "knit-cardigan-sweater.jpg",
+      "productDescription": "Cozy Knit Cardigan Sweater for Women, Button Closure, Ideal for Layering in Cool Weather",
+      "productRating": 4.3,
+      "productCategory": "Sweaters",
+      "productPrice": 59.99
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
    ]

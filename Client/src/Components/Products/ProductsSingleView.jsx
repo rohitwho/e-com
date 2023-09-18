@@ -13,6 +13,7 @@ function Products() {
   const [singleProduct, setSingleProduct] = useState(null);
   const [externalApi, setExternalApi] = useState({});
 
+
   const reviews = [
     { id: 1, stars: 4, comment: "greatProduct", user: "johnSmith" },
     { id: 2, stars: 5, comment: "Soft Fabric Like Feather", user: "janeDoe" },
@@ -56,7 +57,7 @@ function Products() {
       {singleProduct ? (
  <main>
  <div className="ProductSingleViewCard">
-   <img className="SingleViewImage" src={`/src/assets/HomePage/${singleProduct.productImages}`}></img>
+   <img  className="SingleViewImage"   src={`/HomePage/${singleProduct.productImages}`}></img>
    <div key={singleProduct._id}>
      <h2 className=" SingleViewCategory ">{singleProduct.productName}</h2>
 
@@ -79,7 +80,7 @@ function Products() {
        {" "}
        {singleProduct.productDescription}{" "}
      </p>
-     <span style={{padding:"2%"}}>${singleProduct.productPrice}</span>
+     <span style={{padding:"2%"}}>${singleProduct.productPrice}</span> 
 
      <div
        style={{
@@ -123,8 +124,8 @@ function Products() {
      <h2 className=" SingleViewCategory ">{singleProduct.productName}</h2>
      <img
        className="ScrollingCardImage"
-       src={`/src/assets/HomePage/${singleProduct.productImages}`}
-       alt=""
+       src={`/HomePage/${singleProduct.productImages}`}
+       alt={singleProduct.productName}
        loading="lazy"
      />
 

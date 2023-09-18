@@ -1,6 +1,9 @@
 const { model, Schema } = require("mongoose");
 
 const productSchema = new Schema({
+  listType:{
+    type:String
+  },
   productName: {
     type: String,
   },

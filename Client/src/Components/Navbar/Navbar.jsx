@@ -5,8 +5,8 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
  import {useSelector} from 'react-redux'
  import {addToCart, selectCount} from '../../../slice/cartSlice' 
- import logo from '../../assets/HomePage/1.jpeg'
- import store from '../../../store/store'
+//  import logo from '../../assets/HomePage/1.jpeg'
+//  import store from '../../../store/store'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -21,7 +21,7 @@ console.log(totalCount);
       {id:1,menuItemName:'Dashboard',Link:"/"},
       {id:2,menuItemName:'Shop New Deals',Link:"/Deals"},
       {id:3,menuItemName:'Shop Men',Link:"/Men's Fashion"},
-      {id:4,menuItemName:'Shop Women',Link:"/"},
+      {id:4,menuItemName:'Shop Women',Link:"/women'sProducts"},
       {id:5,menuItemName:'Accessories',Link:"/"},
      
    
@@ -35,7 +35,7 @@ console.log(totalCount);
               isMenuOpen={isMenuOpen}
               onMenuOpenChange={setIsMenuOpen}
             >
-              <NavbarContent className="sm:hidden" justify="start">
+              <NavbarContent  justify="start">
                 <NavbarMenuToggle aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
                   
               </NavbarContent>
@@ -72,7 +72,7 @@ console.log(totalCount);
               <NavbarMenu>
                 {menuItems.map((item) => (
                   <NavbarMenuItem key={item.id}>
-                    <Link
+                    <Link onClick={()=>setIsMenuOpen(false)}
                 to={item.Link}
                     >
                       {item.menuItemName}

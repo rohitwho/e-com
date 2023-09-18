@@ -6,41 +6,36 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../../../slice/cartSlice";
 import Product from "../Products/ProductsComponent";
 
-function MenProduct() {
-  const dispatch = useDispatch();
+function WomenProduct() {
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch()
 
   useEffect(() => {
-    const fetch = async () => {
-      try {
-        const data = await axios.get("http://localhost:3001/MenProduct/");
-
-          setProducts(data.data);
-   
-      } catch (err) {
-        console.log(err);
-      }
+    const getProducts = async () => {
+      const response = await axios.get(
+        "http://localhost:3001/women'sProducts"
+      );
+      setProducts(response.data);
     };
-    fetch();
+    getProducts();
   }, []);
 
   return (
     <div className="ProductMain">
       {products?.map((list) => (
         <div key={list._id} className="Product">
-           <Link to={`/Product/${list._id}`}>
-          <Product
-            source={`./HomePage/${list.productImages}`}
-            alt={list.productName}
-            
-            productName={list.productName}
-  
-            price={list.productPrice}
-          ></Product>
+          <Link to={`/Product/${list._id}`}>
+            <Product
+              source={`./src/assets/HomePage/${list.productImages}`}
+              productName={list.productName}
+              price={list.productPrice}
+            ></Product>
           </Link>
 
           <div className="mt-2">
-            <Button variant="ghost" fullWidth
+            <Button
+              variant="ghost"
+              fullWidth
               onClick={() => {
                 dispatch(addToCart(list));
               }}
@@ -49,7 +44,6 @@ function MenProduct() {
             >
               Add To Cart
             </Button>
-        
           </div>
         </div>
       ))}
@@ -57,4 +51,4 @@ function MenProduct() {
   );
 }
 
-export default MenProduct;
+export default WomenProduct;

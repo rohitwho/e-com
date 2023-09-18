@@ -1,12 +1,12 @@
 
 import { Link } from "react-router-dom";
-import homepageImage from "../assets/HomePage/Homepage.png";
-import Men from "../assets/HomePage/men.png";
-import Women from "../assets/HomePage/women2.jpeg";
-import Accessories from "../assets/HomePage/2.jpeg";
-import Flash from "../assets/HomePage/flash.png";
+import homepageImage from "/HomePage/Homepage.png";
+import Men from "/HomePage/men.png";
+import Women from "/HomePage/women2.jpeg";
+import Accessories from "/HomePage/2.jpeg";
+import Flash from "/HomePage/flash.png";
 import Form from "../Components/FormInput/Form";
-import Details from "../assets/HomePage/Details.png";
+import Details from "/HomePage/Details.png";
 import Lottie from "lottie-react";
 import Contact from "../assets/Animations/ContactAnimation.json";
 function homepage() {
@@ -37,7 +37,7 @@ function homepage() {
               </Link>
             </div>
             <div className="WomenSection">
-              <Link to="/WomenFashion">
+              <Link to="/women'sProducts">
                 <img style={{ width: "100%" }} src={Women} alt="" />
               </Link>
             </div>
@@ -70,11 +70,10 @@ function homepage() {
           <div className="GridColumns">
             <h1 >Shop latest Deals</h1>
             <p className="DealsP">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus,
-              sint!
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </p>
             <Link  className="SendButton"to="/Deals">
-              <button  style={{background:"transparent",color:"white"}}>Shop Now</button>
+              <button  style={{background:"transparent",color:"white" }}>Shop Now</button>
             </Link>
           </div>
         </div>
@@ -107,6 +106,8 @@ function homepage() {
                 placeholdertext=""
                 labelFor="Message"
                 inputLabel="Message:"
+                rows="10"
+                cols="50"
                 in
               />
               <aside

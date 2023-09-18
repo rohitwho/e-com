@@ -14,6 +14,7 @@ import Footer from './pages/footer'
 import Product from './Components/Products/ProductsSingleView'
 import MenProduct from './Components/ProductList/MenProduct'
 import Deals from './Components/Hero/DealsPage/DealsPage'
+import WomenProduct from './Components/ProductList/WomenProduct';
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
   <Route path = "/ShowCart" element = {<Cart/>}/> 
   <Route path = "/Product/:id" element = {<Product/>}/>
   <Route path ="/Men's Fashion" element = {<MenProduct/>}/>
+  <Route path ="/women'sProducts" element = {<WomenProduct/>}/>
   <Route path ="/Deals" element={<Deals/>}/>
  </Routes>
 <Footer/>

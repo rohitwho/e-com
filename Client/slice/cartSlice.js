@@ -5,12 +5,12 @@ export const addToCartSlice = createSlice({
 name:"addToCart",
 initialState:{
     value:[],
-    selectedProduct: null, 
+    selectedProduct: [], 
 },
 reducers:{
     addToCart:(state,action)=>{
    
-        const itemPresent = state.value.find((list) => list.id === action.payload.id);
+        const itemPresent = state.value.find((list) => list._id === action.payload._id);
        if (itemPresent){
         itemPresent.quantity++
        }
@@ -20,7 +20,7 @@ reducers:{
 
     },
     removeFromCart: (state, action) => {
-        const itemToRemove = state.value.find((item) => item.id === action.payload.id);
+        const itemToRemove = state.value.find((item) => item._id === action.payload._id);
       
         if (itemToRemove) {
           if (itemToRemove.quantity > 1) {
@@ -28,7 +28,7 @@ reducers:{
             itemToRemove.quantity--;
           } else {
             // If the quantity is 1, remove the item from the cart
-            state.value = state.value.filter((item) => item.id !== action.payload.id);
+            state.value = state.value.filter((item) => item._id !== action.payload._id);
           }
         }
       },
