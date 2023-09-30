@@ -73,7 +73,7 @@
     },
     {"listType":"WOMEN",
       "productName": "High-Waisted Skinny Jeans",
-      "productImages": "high-waist-jeans.jpg",
+      "productImages": "skinnyJeans.jpeg",
       "productDescription": "Classic High-Waisted Skinny Jeans for Women, Stretch Denim, Available in Various Sizes and Washes",
       "productRating": 4.8,
       "productCategory": "Jeans",
@@ -82,7 +82,7 @@
     {
       "listType":"WOMEN",
       "productName": "Lace Trim Camisole",
-      "productImages": "lace-camisole.jpg",
+      "productImages": "lacetrace.jpeg",
       "productDescription": "Elegant Lace Trim Camisole for Women, Soft and Comfortable, Ideal for Layering or Sleepwear",
       "productRating": 4.3,
       "productCategory": "Tops",
@@ -91,7 +91,7 @@
     {
       "listType":"WOMEN",
       "productName": "Leather Biker Jacket",
-      "productImages": "leather-jacket.jpg",
+      "productImages": "leatherJacket.jpeg",
       "productDescription": "Stylish Leather Biker Jacket for Women, Zip Closure, Multiple Pockets, Edgy and Fashionable",
       "productRating": 4.6,
       "productCategory": "Outerwear",
@@ -100,7 +100,7 @@
     {
       "listType":"WOMEN",
       "productName": "Boho Maxi Skirt",
-      "productImages": "boho-maxi-skirt.jpg",
+      "productImages": "skirt.webp",
       "productDescription": "Bohemian Style Maxi Skirt for Women, Floral Print, Flowy and Comfortable, Perfect for Summer",
       "productRating": 4.2,
       "productCategory": "Skirts",
@@ -109,16 +109,16 @@
     {
       "listType":"WOMEN",
       "productName": "Striped Sweater Dress",
-      "productImages": "striped-sweater-dress.jpg",
+      "productImages": "sweater.webp",
       "productDescription": "Striped Sweater Dress for Women, Long Sleeves, Cozy and Warm, Suitable for Fall and Winter",
       "productRating": 4.4,
       "productCategory": "Dresses",
       "productPrice": 49.99
     },
     {
-      "listType":"WOMEN",
+      "listType":"Accessories",
       "productName": "Printed Silk Scarf",
-      "productImages": "silk-scarf.jpg",
+      "productImages": "scarf.jpeg",
       "productDescription": "Elegant Printed Silk Scarf for Women, Versatile and Stylish, Adds a Touch of Luxury to Any Outfit",
       "productRating": 4.7,
       "productCategory": "Accessories",
@@ -127,7 +127,7 @@
     {
       "listType":"WOMEN",
       "productName": "Cotton Blend Leggings",
-      "productImages": "cotton-leggings.jpg",
+      "productImages": "leggings.jpeg",
       "productDescription": "Comfortable Cotton Blend Leggings for Women, Perfect for Active or Casual Wear, Multiple Colors Available",
       "productRating": 4.5,
       "productCategory": "Pants",
@@ -136,16 +136,16 @@
     {
       "listType":"WOMEN",
       "productName": "Off-Shoulder Blouse",
-      "productImages": "off-shoulder-blouse.jpg",
+      "productImages": "offShoulder.webp",
       "productDescription": "Stylish Off-Shoulder Blouse for Women, Flowy and Feminine, Ideal for Summer and Special Occasions",
       "productRating": 4.6,
       "productCategory": "Tops",
       "productPrice": 39.99
     },
     {
-      "listType":"WOMEN",
+      "listType":"Accessories",
       "productName": "Quilted Crossbody Bag",
-      "productImages": "quilted-crossbody-bag.jpg",
+      "productImages": "Bag.jpeg",
       "productDescription": "Quilted Crossbody Bag for Women, Compact and Stylish, Perfect for Carrying Essentials",
       "productRating": 4.4,
       "productCategory": "Bags",
@@ -154,21 +154,11 @@
     {
       "listType":"WOMEN",
       "productName": "Knit Cardigan Sweater",
-      "productImages": "knit-cardigan-sweater.jpg",
+      "productImages": "knit.jpeg",
       "productDescription": "Cozy Knit Cardigan Sweater for Women, Button Closure, Ideal for Layering in Cool Weather",
       "productRating": 4.3,
       "productCategory": "Sweaters",
       "productPrice": 59.99
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-  
    ]

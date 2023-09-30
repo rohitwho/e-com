@@ -9,16 +9,18 @@ import {
 import { useEffect, useState } from "react";
 import Lottie from "lottie-react";
 import EmptyCart from "../../assets/Animations/EmptyCart.json";
-import axios from "axios";
 
 function Cart() {
   const dispatch = useDispatch();
+
   const emptyCart = useSelector(selectSelectedProduct);
+  console.log(emptyCart);
+
+
 
   const [checkoutItem, setCheckoutItem] = useState([]);
   const [overallTotal, setOverallTotal] = useState(0);
 
-  console.log(checkoutItem);
   const cartItems = useSelector(selectCount);
 
   const calculateTaxAmount = (Cost) => Math.floor((Cost * 13) / 100);
@@ -31,25 +33,23 @@ function Cart() {
 
   useEffect(() => {
     let newOverallTotal = 0;
-  
+
     checkoutItem.forEach((item) => {
-   
-      const itemTotal = totalAmount(item.productPrice, calculateTaxAmount(item.productPrice));
-  
+      const itemTotal = totalAmount(
+        item.productPrice,
+        calculateTaxAmount(item.productPrice)
+      );
 
       if (item.quantity > 1) {
+        const addQuantity = item.productPrice * (item.quantity - 1);
 
-        const addQuantity = (item.productPrice * (item.quantity - 1));
-        
-   
-        newOverallTotal += (itemTotal + addQuantity);
+        newOverallTotal += itemTotal + addQuantity;
       } else {
-
         newOverallTotal += itemTotal;
       }
     });
-  
-    setOverallTotal(newOverallTotal);
+
+   setOverallTotal(newOverallTotal);
   }, [checkoutItem]);
   return (
     <div className="form">
@@ -132,7 +132,10 @@ function Cart() {
           label="CVV"
           placeholder="123"
         />
-        <h1> Today's Total  : <span className="TotalPrice">${ overallTotal}</span></h1>
+        <h1>
+          {" "}
+          Today's Total : <span className="TotalPrice">${overallTotal}</span>
+        </h1>
         <Button className="inp" variant="ghost" color="primary">
           {" "}
           Proceed To Checkout
@@ -143,4 +146,3 @@ function Cart() {
 }
 
 export default Cart;
-

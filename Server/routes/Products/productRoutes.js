@@ -2,10 +2,10 @@ const route = require("express").Router();
 
 const ProductList = require("../../models/products");
 
-route.get("/MenProduct/", async (req, res) => {
+route.get("/MenProduct", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "MEN" });
-  // res.contentType('image/jpeg')
+
 
     res.json(findAll);
   } catch (err) {
@@ -16,6 +16,15 @@ route.get("/MenProduct/", async (req, res) => {
 route.get("/women'sProducts", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "WOMEN" });
+    res.json(findAll);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+route.get("/Accessories", async (req, res) => {
+  try {
+    const findAll = await ProductList.find({ listType: "Accessories" });
     res.json(findAll);
   } catch (err) {
     console.log(err);

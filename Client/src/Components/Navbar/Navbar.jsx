@@ -3,13 +3,20 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem, AvatarIcon, Avatar,Navba
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
- import {useSelector} from 'react-redux'
- import {addToCart, selectCount} from '../../../slice/cartSlice' 
+import { useSelector,useDispatch } from "react-redux";
+ import {addToCart, selectCount,selectPage} from '../../../slice/cartSlice' 
 //  import logo from '../../assets/HomePage/1.jpeg'
 //  import store from '../../../store/store'
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const dispatch= useDispatch()
+    function selectPageToView(list){
+      const setPageToView = dispatch(selectPage(list))
+      console.log(setPageToView);
+
+      setIsMenuOpen(false)
+    }
 //     const count = selectCount(store.getState())
 // console.log(count)
 const totalCount = useSelector(selectCount);
@@ -20,9 +27,9 @@ console.log(totalCount);
     const menuItems = [
       {id:1,menuItemName:'Dashboard',Link:"/"},
       {id:2,menuItemName:'Shop New Deals',Link:"/Deals"},
-      {id:3,menuItemName:'Shop Men',Link:"/Men's Fashion"},
-      {id:4,menuItemName:'Shop Women',Link:"/women'sProducts"},
-      {id:5,menuItemName:'Accessories',Link:"/"},
+      {id:3,menuItemName:'Shop Men',Link:"/MenProduct",to:"/Fashion"},
+      {id:4,menuItemName:'Shop Women',Link:"/women'sProducts",to:"/Fashion"},
+      {id:5,menuItemName:'Accessories',Link:"/Accessories",to:"/Fashion"},
      
    
      
@@ -72,8 +79,9 @@ console.log(totalCount);
               <NavbarMenu>
                 {menuItems.map((item) => (
                   <NavbarMenuItem key={item.id}>
-                    <Link onClick={()=>setIsMenuOpen(false)}
-                to={item.Link}
+                    <Link onClick={()=>selectPageToView(item.Link)}
+                    to={item.to}
+              
                     >
                       {item.menuItemName}
                     </Link>

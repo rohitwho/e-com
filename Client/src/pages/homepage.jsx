@@ -9,7 +9,16 @@ import Form from "../Components/FormInput/Form";
 import Details from "/HomePage/Details.png";
 import Lottie from "lottie-react";
 import Contact from "../assets/Animations/ContactAnimation.json";
+import { useSelector,useDispatch } from "react-redux";
+import {selectPage} from '../../slice/cartSlice'
 function homepage() {
+  const dispatch = useDispatch()
+  function showList(list) {
+
+ dispatch(selectPage(list))
+
+    
+  }
   return (
     <main>
       <img
@@ -31,32 +40,33 @@ function homepage() {
               gap: "10px",
             }}
           >
-            <div className="MenSection">
-              <Link to="/Men's Fashion">
+            <div  onClick={()=>{showList("/MenProduct")}} className="MenSection">
+              <Link to="/Fashion">
                 <img src={Men} alt="" />
+               
               </Link>
             </div>
-            <div className="WomenSection">
-              <Link to="/women'sProducts">
+            <div  onClick  ={ ()=>{showList("/women'sProducts")}} className="WomenSection">
+            <Link to="/Fashion">
                 <img style={{ width: "100%" }} src={Women} alt="" />
-              </Link>
+                </Link>
             </div>
           </div>
-          <div className="Accessories">
+          <div onClick  ={ ()=>{showList("/Accessories")}} className="Accessories">
             
             <div className="GridColumns">
             <h1 >From Me To Me</h1>
             <p className="DealsP">
            Jwelery to Give Yourself For Reaching The Personal Goals.
             </p>
-            <Link className="SendButton" to="/Accessories">
+            <Link className="SendButton" to="/Fashion">
             <button  style={{background:"transparent",color:"white"}}>Shop Now</button>
             </Link>
 
             </div>
-            <div>  <Link to="/Accessories">
+            <div> 
               <img style={{ width: "100%" }} src={Accessories} alt="" />
-            </Link></div>
+          </div>
           </div>
         </main>
 

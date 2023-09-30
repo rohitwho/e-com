@@ -143,7 +143,8 @@ color: var(--fontColor);
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* height: 480px; */
+ 
+
   padding: 2%;
   border-radius: 6px;
 }
@@ -270,8 +271,8 @@ justify-content: space-evenly;
   font-size: var(--h1Font);
 }
 .TotalPrice{
-  font-family: var(--font-PlayfairDisplay);
- font-weight: 600;
+  font-family: var(--font-PoiretOne);
+ font-weight: 700;
  font-size: var(--h1Font);
 }
 

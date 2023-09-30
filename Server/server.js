@@ -16,7 +16,7 @@ app.use("/",express.static(path.join(__dirname, 'public')))
 // });
 
 // const upload = multer({ storage: storage });
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 // app.post("/men'sProducts",upload.single('upload'),(req,res)=>{
