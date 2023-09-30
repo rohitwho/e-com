@@ -4,6 +4,12 @@ const cors = require("cors");
 const db = require("./config/Connection");
 const routes = require("./routes/Products/productRoutes")
 const path = require('path')
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../Client/dist")));
+}
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Client/dist/index.html"));
+});
 app.use("/",express.static(path.join(__dirname, 'public')))
 // const multer = require('multer');
 // const storage = multer.diskStorage({
