@@ -15,7 +15,7 @@ function MenProduct() {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const data = await axios.get(` https://shopall.codevizz.com${pickPage}`);
+        const data = await axios.get(pickPage);
 
           setProducts(data.data);
    
