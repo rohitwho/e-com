@@ -4,7 +4,7 @@ const cors = require("cors");
 const db = require("./config/Connection");
 const routes = require("./routes/Products/productRoutes")
 const path = require('path')
-app.use("/",express.static(path.join(__dirname, 'public')))
+// app.use("/",express.static(path.join(__dirname, 'public')))
 // const multer = require('multer');
 // const storage = multer.diskStorage({
 //   destination: './Client/src/assets/HomePage', // Specify the destination folder where files will be stored
