@@ -2,7 +2,10 @@
   "name": "e-com",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "engines": {
+    "node": "20.4.0"
+  },
+  "main": "Server/server.js",
   "scripts": {
     "start": "node Server/server.js",
     "develop": "concurrently \"cd Server && npm run watch\" \"cd Client && npm run dev\"",
