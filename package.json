@@ -17,6 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "@vitejs/plugin-react": "^4.1.0",
+    "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.1",
     "vite": "^4.4.9"
   }
