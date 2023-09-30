@@ -28,7 +28,7 @@ function Products() {
     const fetchById = async () => {
       try {
         const fetchSingleProduct = await axios.get(
-          `http://localhost:3001/MenProduct/${id}`
+          `https://shopall-7d84df423472.herokuapp.com/MenProduct/${id}`
         );
         if (!fetchSingleProduct) {
           return;

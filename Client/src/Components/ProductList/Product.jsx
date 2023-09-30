@@ -15,7 +15,7 @@ function MenProduct() {
   useEffect(() => {
     const fetch = async () => {
       try {
-        const data = await axios.get(pickPage);
+        const data = await axios.get(`https://shopall-7d84df423472.herokuapp.com${pickPage}`);
 
           setProducts(data.data);
    
