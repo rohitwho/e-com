@@ -19,10 +19,7 @@ app.use("/",express.static(path.join(__dirname, 'public')))
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
-// app.post("/men'sProducts",upload.single('upload'),(req,res)=>{
-  
-//   console.log(req.file, req.body)
-// })
+
 app.use(routes)
 
 db.once("open", () => {
