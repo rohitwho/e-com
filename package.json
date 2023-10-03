@@ -20,6 +20,8 @@
     "@vitejs/plugin-react": "^4.1.0",
     "autoprefixer": "^10.4.16",
     "concurrently": "^8.2.1",
+    "node": "^20.7.0",
+    "npm": "^10.2.0",
     "vite": "^4.4.9"
   }
 }
