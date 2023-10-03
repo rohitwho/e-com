@@ -9,7 +9,7 @@ import Form from "../Components/FormInput/Form";
 import Details from "/HomePage/Details.png";
 import Lottie from "lottie-react";
 import Contact from "../assets/Animations/ContactAnimation.json";
-import { useSelector,useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import {selectPage} from '../../slice/cartSlice'
 function homepage() {
   const dispatch = useDispatch()

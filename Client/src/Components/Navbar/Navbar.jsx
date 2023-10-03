@@ -11,6 +11,8 @@ import { useSelector,useDispatch } from "react-redux";
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const dispatch= useDispatch()
+    const quantity = useSelector(selectCount).length
+
     function selectPageToView(list){
       const setPageToView = dispatch(selectPage(list))
       console.log(setPageToView);
@@ -19,8 +21,8 @@ function Header() {
     }
 //     const count = selectCount(store.getState())
 // console.log(count)
-const totalCount = useSelector(selectCount);
-console.log(totalCount);
+// const totalCount = useSelector(selectCount);
+// console.log(totalCount);
 // const quantity = totalCount[0].quantity 
 // console.log(quantity);
 
@@ -73,7 +75,7 @@ console.log(totalCount);
         }}
       />
                  
-                  <Link to = "/ShowCart"> <Badge color="danger" content="" shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
+                  <Link to = "/ShowCart"> <Badge color="danger" content={quantity} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
               <NavbarMenu>

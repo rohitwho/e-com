@@ -19,6 +19,7 @@ function Cart() {
 
 
   const [checkoutItem, setCheckoutItem] = useState([]);
+  console.log(checkoutItem);
   const [overallTotal, setOverallTotal] = useState(0);
 
   const cartItems = useSelector(selectCount);

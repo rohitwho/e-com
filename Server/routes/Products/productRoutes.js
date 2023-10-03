@@ -13,6 +13,7 @@ route.get("/MenProduct", async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 route.get("/women'sProducts", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "WOMEN" });

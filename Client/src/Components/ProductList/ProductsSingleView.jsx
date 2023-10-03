@@ -3,32 +3,38 @@ import { Button, ButtonGroup } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-import { useDispatch } from "react-redux";
-import { addToCart, setSelectedProduct } from "../../../slice/cartSlice";
+import { useDispatch,useSelector } from "react-redux";
+import { addToCart, setSelectedProduct,showPage} from "../../../slice/cartSlice";
 import { useParams } from "react-router-dom";
 import Reviews from "../Reviews/Reviews";
+
 
 function Products() {
   const { id } = useParams();
   const [singleProduct, setSingleProduct] = useState(null);
   const [externalApi, setExternalApi] = useState({});
-
+  const pickPage = useSelector(showPage)
 
   const reviews = [
     { id: 1, stars: 4, comment: "greatProduct", user: "johnSmith" },
     { id: 2, stars: 5, comment: "Soft Fabric Like Feather", user: "janeDoe" },
-    { id: 3, stars: 3, comment: "greatProduct", user: "johnSmith" },
+    { id: 3, stars: 3, comment: "Must Buy. I bought it for my fiancee for Valentine's", user: "johnSmith" },
     { id: 4, stars: 4, comment: "greatProduct", user: "johnSmith" },
     { id: 5, stars: 2, comment: "greatProduct", user: "johnSmith" },
   ];
 
   const dispatch = useDispatch();
+  function pickSize(size) {
+    const updateSize = size;
+console.log(updateSize);
 
+    
+  }
   useEffect(() => {
     const fetchById = async () => {
       try {
         const fetchSingleProduct = await axios.get(
-          `https://shopall-7d84df423472.herokuapp.com/MenProduct/${id}`
+          `https://shopall-7d84df423472.herokuapp.com${pickPage}/${id}`
         );
         if (!fetchSingleProduct) {
           return;
@@ -39,7 +45,7 @@ function Products() {
       }
     };
     fetchById();
-  }, [id]);
+  }, [pickPage,id]);
 
   useEffect(() => {
     const fetchSingleProduct = async () => {
@@ -66,10 +72,18 @@ function Products() {
          <p  className="productSize"style={{padding:"2%"}}>Sizes:</p>
          <div className="ButtonGroup">
            <ButtonGroup variant="ghost" color="primary">
-             <Button value="XS">XS</Button>
-             <Button value="M">M</Button>
-             <Button value="L">L</Button>
-             <Button value="XL">Xl</Button>
+             <Button  onClick={()=>{
+              pickSize("XS")
+             }} value="XS">XS</Button>
+             <Button onClick={()=>{
+              pickSize("M")
+             }}    value="M">M</Button>
+             <Button onClick={()=>{
+              pickSize("L")
+             }}  value="L">L</Button>
+             <Button  onClick={()=>{
+              pickSize("XL")
+             }}  value="XL">Xl</Button>
            </ButtonGroup>
          </div>
        </>
