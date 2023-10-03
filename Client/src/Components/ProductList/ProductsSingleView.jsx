@@ -18,7 +18,7 @@ function Products() {
   const reviews = [
     { id: 1, stars: 4, comment: "greatProduct", user: "johnSmith" },
     { id: 2, stars: 5, comment: "Soft Fabric Like Feather", user: "janeDoe" },
-    { id: 3, stars: 3, comment: "Must Buy. I bought it for my fiancee for Valentine's", user: "johnSmith" },
+    { id: 3, stars: 3, comment: "Must Buy. I bought it for my fiance for Valentine's", user: "janaDoe" },
     { id: 4, stars: 4, comment: "greatProduct", user: "johnSmith" },
     { id: 5, stars: 2, comment: "greatProduct", user: "johnSmith" },
   ];

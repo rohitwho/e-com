@@ -78,9 +78,9 @@ function Header() {
                   <Link to = "/ShowCart"> <Badge color="danger" content={quantity} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>
               </NavbarContent>
-              <NavbarMenu>
+              <NavbarMenu >
                 {menuItems.map((item) => (
-                  <NavbarMenuItem key={item.id}>
+                  <NavbarMenuItem key={item.id} style={{color:"black"}}>
                     <Link onClick={()=>selectPageToView(item.Link)}
                     to={item.to}
               
