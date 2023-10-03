@@ -23,6 +23,7 @@ route.get("/women'sProducts", async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 route.get("/Accessories", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "Accessories" });
@@ -32,7 +33,23 @@ route.get("/Accessories", async (req, res) => {
     res.status(500).json({ error: 'Internal server error' });
   }
 });
+
 route.get("/MenProduct/:id", async (req, res) => {
+  try {
+    const product = await ProductList.findById(req.params.id);
+
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.json(product);
+  } catch (err) {
+    console.error(err);
+
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+route.get("/women'sProducts/:id", async (req, res) => {
   try {
     const product = await ProductList.findById(req.params.id);
 
