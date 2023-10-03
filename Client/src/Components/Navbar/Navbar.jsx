@@ -28,7 +28,7 @@ function Header() {
 
     const menuItems = [
       {id:1,menuItemName:'Dashboard',Link:"/"},
-      {id:2,menuItemName:'Shop New Deals',Link:"/Deals"},
+      {id:2,menuItemName:'Shop New Deals',to:"/Deals"},
       {id:3,menuItemName:'Shop Men',Link:"/MenProduct",to:"/Fashion"},
       {id:4,menuItemName:'Shop Women',Link:"/women'sProducts",to:"/Fashion"},
       {id:5,menuItemName:'Accessories',Link:"/Accessories",to:"/Fashion"},

@@ -64,4 +64,19 @@ route.get("/women'sProducts/:id", async (req, res) => {
     res.status(500).json({ error: "Internal Server Error" });
   }
 });
+route.get("/Accessories/:id", async (req, res) => {
+  try {
+    const product = await ProductList.findById(req.params.id);
+
+    if (!product) {
+      return res.status(404).json({ error: "Product not found" });
+    }
+
+    res.json(product);
+  } catch (err) {
+    console.error(err);
+
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
 module.exports = route;
