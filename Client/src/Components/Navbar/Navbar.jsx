@@ -27,7 +27,7 @@ function Header() {
 // console.log(quantity);
 
     const menuItems = [
-      {id:1,menuItemName:'Dashboard',Link:"/"},
+      {id:1,menuItemName:'Dashboard',to:"/"},
       {id:2,menuItemName:'Shop New Deals',to:"/Deals"},
       {id:3,menuItemName:'Shop Men',Link:"/MenProduct",to:"/Fashion"},
       {id:4,menuItemName:'Shop Women',Link:"/women'sProducts",to:"/Fashion"},
