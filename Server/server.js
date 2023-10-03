@@ -6,9 +6,9 @@ const routes = require("./routes/Products/productRoutes");
 const path = require("path");
 const dotenv = require ("dotenv").config()
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static(path.join(__dirname, "../Client/dist/")));
-// }
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../Client/dist/")));
+}
 
 
 app.get("/", (req, res) => {
