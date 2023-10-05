@@ -366,7 +366,9 @@ width:12%
   width: 100%;
   color: #1a1a1a;
 }
-
+.gridContainer{
+  margin: 2%;
+}
 @media only screen and (min-width: 600px) {
   .HomeView {
     grid-template-columns: 1fr 1fr;
@@ -421,6 +423,18 @@ color: #1a1a1a;
 font-size: var(--font1-5rem);
 color: #1a1a1a;
 
+}
+.Grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.Grid-Article{
+
+  border: dotted;
+}
+input{
+  border: 1px solid black;
 }
 }
 @media only screen and (min-width: 1220px) {

@@ -8,6 +8,7 @@ import Product from "./Components/ProductList/ProductsSingleView";
 import ProductGrid from "./Components/ProductList/Product";
 import Deals from "./Components/Hero/DealsPage/DealsPage";
 import FourOFour from "./Components/404/FourOFour";
+import PostProduct from "./Components/Products/PostProduct";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
           <Route path="/Product/:id" element={<Product />} />
           <Route path="/Fashion" element={<ProductGrid />} />
           <Route path="/Deals" element={<Deals />} />
-          <Route path="*" element={<FourOFour />} />
+          <Route path = "/Post" element ={< PostProduct/>}/>
+           <Route path="*" element={<FourOFour />} />
         </Routes>
         <Footer />
       </>

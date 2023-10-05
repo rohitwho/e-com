@@ -18,7 +18,7 @@ function Form({
 	<label className="Form-Label" htmlFor={labelFor}>
 			{inputLabel}
 	</label>
-	<textarea
+	<input
 			className="Form-Input"
 			type={inputType}
 		

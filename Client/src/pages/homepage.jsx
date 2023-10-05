@@ -65,7 +65,7 @@ function homepage() {
 
             </div>
             <div> 
-              <img style={{ width: "100%" }} src={Accessories} alt="" />
+              <img style={{ width: "100%" }} src={Accessories} alt= "Accessories" />
           </div>
           </div>
         </main>
@@ -75,7 +75,7 @@ function homepage() {
         
         >
           <div className="GridColumns">
-            <img className="GridColumImage" src={Flash} alt="" />
+            <img className="GridColumImage" src={Flash} alt="Shop latest Deals" />
           </div>
           <div className="GridColumns">
             <h1 >Shop latest Deals</h1>

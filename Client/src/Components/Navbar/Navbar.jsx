@@ -5,8 +5,7 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
 import { useSelector,useDispatch } from "react-redux";
  import {addToCart, selectCount,selectPage} from '../../../slice/cartSlice' 
-//  import logo from '../../assets/HomePage/1.jpeg'
-//  import store from '../../../store/store'
+
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -19,7 +18,7 @@ function Header() {
 
       setIsMenuOpen(false)
     }
-//     const count = selectCount(store.getState())
+//     const count = electCount(store.getState())
 // console.log(count)
 // const totalCount = useSelector(selectCount);
 // console.log(totalCount);

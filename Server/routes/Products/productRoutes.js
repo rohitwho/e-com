@@ -14,6 +14,19 @@ route.get("/MenProduct", async (req, res) => {
   }
 });
 
+route.post("/PostProduct",async (req,res)=>{
+  try{
+    const postProduct = await ProductList.create()
+    res.json(postProduct)
+
+    
+
+  }catch(err){
+    console.log(err);
+  }
+
+})
+
 route.get("/women'sProducts", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "WOMEN" });
