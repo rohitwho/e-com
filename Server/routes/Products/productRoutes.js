@@ -1,31 +1,36 @@
 const route = require("express").Router();
 
+const { log } = require("console");
 const ProductList = require("../../models/products");
 
 route.get("/MenProduct", async (req, res) => {
   try {
     const findAll = await ProductList.find({ listType: "MEN" });
 
-
     res.json(findAll);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
-route.post("/PostProduct",async (req,res)=>{
-  try{
-    const postProduct = await ProductList.create()
-    res.json(postProduct)
+route.post("/PostProduct", async (req, res) => {
+  try {
+    // const { productName, productDescription, productCategory, productPrice } =
+    //   req.body;
+  console.log(req.body);
 
-    
-
-  }catch(err){
+    const postProduct = await ProductList.create({
+      productName: req.body.productName,
+      productDescription: req.body.productDescription,
+      productCategory: req.body.productCategory,
+      productPrice: req.body.productPrice
+    });
+    res.status(200).json(postProduct);
+  } catch (err) {
     console.log(err);
   }
-
-})
+});
 
 route.get("/women'sProducts", async (req, res) => {
   try {
@@ -33,7 +38,7 @@ route.get("/women'sProducts", async (req, res) => {
     res.json(findAll);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 
@@ -43,7 +48,7 @@ route.get("/Accessories", async (req, res) => {
     res.json(findAll);
   } catch (err) {
     console.log(err);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ error: "Internal server error" });
   }
 });
 

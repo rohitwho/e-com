@@ -26,12 +26,12 @@ function Form({
 			name={inputName}
 			placeholder={placeholdertext}
 			aria-label={ariaLabelName}
-			cols={cols}
-			rows={rows}
 			value={value} // Bind the value to the input
           onChange={onChange}
 			required
  />
+
+
 		</div>
   );
 }

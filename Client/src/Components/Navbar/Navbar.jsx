@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, AvatarIcon, Avatar,NavbarMenuToggle,NavbarMenu,NavbarMenuItem,Badge} from "@nextui-org/react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, AvatarIcon, Avatar,NavbarMenuToggle,NavbarMenu,NavbarMenuItem,Badge,DropdownTrigger,Dropdown,DropdownItem,DropdownMenu} from "@nextui-org/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
@@ -35,6 +35,10 @@ function Header() {
    
      
     ];
+    function linkTo(link) {
+      window.location= link
+      
+    }
     return (
         <div>
             <Navbar
@@ -66,13 +70,44 @@ function Header() {
                 </NavbarItem>
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
                 {/* <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" /> */}
-                <Avatar
+                <Dropdown placement="bottom-end">
+        <DropdownTrigger>
+          <Avatar
+            isBordered
+            as="button"
+            className="transition-transform"
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+          />
+        </DropdownTrigger>
+        <DropdownMenu aria-label="Profile Actions" variant="flat">
+          <DropdownItem key="profile" className="h-14 gap-2">
+            <p className="font-semibold">Signed in as</p>
+            <p className="font-semibold">zoey@example.com</p>
+          </DropdownItem>
+          <DropdownItem key="settings">
+            My Settings
+          </DropdownItem>
+          <DropdownItem key="Post" onPress={()=> linkTo("/Post")}>
+            <Link to ="/Post">Post</Link>
+            
+          </DropdownItem>
+       
+          <DropdownItem key="help_and_feedback">
+            Help & Feedback
+          </DropdownItem>
+          <DropdownItem key="logout" color="danger" onPress={()=> linkTo("/LogOut")}>
+            Log Out
+          </DropdownItem>
+        </DropdownMenu>
+      </Dropdown>
+
+                {/* <Avatar
         icon={<AvatarIcon />}
         classNames={{
           base: "transparent",
           icon: "text-black/80",
         }}
-      />
+      /> */}
                  
                   <Link to = "/ShowCart"> <Badge color="danger" content={quantity} shape="circle">  <FontAwesomeIcon size='2x' icon={faCartShopping} /></Badge></Link>
                 </NavbarItem>

@@ -5,6 +5,8 @@ const db = require("./config/Connection");
 const routes = require("./routes/Products/productRoutes");
 const path = require("path");
 const dotenv = require ("dotenv").config()
+const bodyParser = require('body-parser');
+
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../Client/dist/")));
@@ -29,6 +31,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 const PORT = process.env.PORT || 3001;
 
 app.use(cors());
+app.use(bodyParser.json());
 
 app.use(routes);
 
