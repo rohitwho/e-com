@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, AvatarIcon, Avatar,NavbarMenuToggle,NavbarMenu,NavbarMenuItem,Badge,DropdownTrigger,Dropdown,DropdownItem,DropdownMenu} from "@nextui-org/react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import {Link} from "react-router-dom"
 import { useSelector,useDispatch } from "react-redux";
  import {addToCart, selectCount,selectPage} from '../../../slice/cartSlice' 
+ import { onAuthStateChanged,signOut } from "firebase/auth";
+ import { authentication } from "../../../Auth/firebase";
 
 
 function Header() {
+  const [displayEmail,setDisplayEmail]= useState("")
+  console.log(displayEmail);
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const dispatch= useDispatch()
     const quantity = useSelector(selectCount).length
@@ -17,6 +21,7 @@ function Header() {
       console.log(setPageToView);
 
       setIsMenuOpen(false)
+
     }
 //     const count = electCount(store.getState())
 // console.log(count)
@@ -35,6 +40,9 @@ function Header() {
    
      
     ];
+    onAuthStateChanged(authentication,(currentUser)=>{
+      setDisplayEmail(currentUser)
+    })
     function linkTo(link) {
       window.location= link
       
@@ -70,32 +78,34 @@ function Header() {
                 </NavbarItem>
                 <NavbarItem className=' flex gap-4  align-middle justify-center' >
                 {/* <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" /> */}
-                <Dropdown placement="bottom-end">
-        <DropdownTrigger>
+                <Dropdown placement="bottom-end" >
+        <DropdownTrigger >
           <Avatar
             isBordered
             as="button"
             className="transition-transform"
-            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+            src="https://i.pravatar.cc/150?u=a042581f4e29026704f"
           />
         </DropdownTrigger>
         <DropdownMenu aria-label="Profile Actions" variant="flat">
           <DropdownItem key="profile" className="h-14 gap-2">
-            <p className="font-semibold">Signed in as</p>
-            <p className="font-semibold">zoey@example.com</p>
+            {displayEmail?( <><p className="font-semibold" onClick={()=> linkTo("/SignUp")}>Signed in as</p>
+            <p className="font-semibold">{displayEmail?.email}</p></>):(<p className="font-semibold" onClick={()=> linkTo("/SignUp")}>Sign Up/LogIn</p>)}
+           
           </DropdownItem>
           <DropdownItem key="settings">
             My Settings
           </DropdownItem>
-          <DropdownItem key="Post" onPress={()=> linkTo("/Post")}>
+          { displayEmail ? (<DropdownItem key="Post" onPress={()=> linkTo("/Post")}>
             <Link to ="/Post">Post</Link>
             
-          </DropdownItem>
+          </DropdownItem>):(null)}
+          
        
           <DropdownItem key="help_and_feedback">
             Help & Feedback
           </DropdownItem>
-          <DropdownItem key="logout" color="danger" onPress={()=> linkTo("/LogOut")}>
+          <DropdownItem key="logout" color="danger" onPress={()=> signOut(authentication)}>
             Log Out
           </DropdownItem>
         </DropdownMenu>

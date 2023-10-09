@@ -9,6 +9,8 @@ import ProductGrid from "./Components/ProductList/Product";
 import Deals from "./Components/Hero/DealsPage/DealsPage";
 import FourOFour from "./Components/404/FourOFour";
 import PostProduct from "./Components/Products/PostProduct";
+import Login from "./Components/Login-SignUp/Login";
+import SignUp from "./Components/Login-SignUp/SignUp";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/Fashion" element={<ProductGrid />} />
           <Route path="/Deals" element={<Deals />} />
           <Route path = "/Post" element ={< PostProduct/>}/>
+          <Route path = "/Login" element = {<Login/>}/>
+          <Route path = "/SignUp" element = {<SignUp/>}/>
            <Route path="*" element={<FourOFour />} />
         </Routes>
         <Footer />

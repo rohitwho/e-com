@@ -388,6 +388,30 @@ gap:6px;
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
   padding:2%;
 }
+.Login-Container{
+  padding: 2%;
+
+}
+.Login-Container > input{
+  padding-bottom: 2%;
+}
+.SignUp-Container{
+  padding:2%;
+ 
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+background-image: url("../public/HomePage/2.jpeg");
+background-repeat: no-repeat;
+background-position: center;
+
+  
+}
+.SignUp-Wrapper{
+
+
+}
 @media only screen and (min-width: 600px) {
   .HomeView {
     grid-template-columns: 1fr 1fr;
@@ -459,6 +483,8 @@ input{
 gap:6px;
 padding-bottom: 2%;
 }
+
+
 }
 @media only screen and (min-width: 1220px) {
   .HomeView {
@@ -485,7 +511,7 @@ padding-bottom: 2%;
   }
 }
 
-  @media (prefers-color-scheme: light) {
+  @media (prefers-color-scheme: dark) {
     :root {
       color: #213547;
       background-color: #ffffff;
