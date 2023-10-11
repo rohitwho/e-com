@@ -3,6 +3,8 @@ import { Input, Button,  } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { authentication } from "../../../Auth/firebase";
+import Lottie  from "lottie-react";
+import SignupAnimation from "../../assets/Animations/Signup.json";
 
 function SignUp() {
   const [signUpInformation, setSignUpInformation] = useState({
@@ -10,7 +12,7 @@ function SignUp() {
     password: "",
     displayName: "",
   });
-  console.log(signUpInformation);
+ 
 
   function signupValueHandler(e) {
     const { name, value } = e.target;
@@ -25,7 +27,7 @@ function SignUp() {
 
 const signupData = await createUserWithEmailAndPassword(authentication,email,password,displayName)
 window.location.assign("/");
-console.log(signupData);
+
 
 
     }catch(err){
@@ -38,14 +40,22 @@ console.log(signupData);
 
   return (
     <div className="SignUp-Container">
+      <div className="animation" >
+        <Lottie animationData={SignupAnimation}></Lottie>
+      </div>
       <section className="SignUp-Wrapper">
+
+      <h1 className="login-H1">SignUp</h1>
           <Input
             isRequired
+            radius="lg"
             type="email"
             name="username"
             label="Username"
             variant="underlined"
             placeholder="Enter Username"
+           
+     
             value={signUpInformation.username}
             onChange={signupValueHandler}
           />
@@ -70,12 +80,13 @@ console.log(signupData);
             onChange={signupValueHandler}
           />
           <section className="Grid">
-              <div>
-                  <h1>Already Have an Account ? <Link to = "/Login"> LogIn</Link></h1>
+              <div style={{fontSize:"1rem",fontWeight:"600"}}>
+                  <h1> <Link to = "/Login"> Login Instead?</Link></h1>
               </div>
-              <div><Button onClick={signupHandler}>SignUp</Button></div>
           </section>
-      </section>
+              <button  onClick={signupHandler} className=" login-btn">SignUp</button>
+           </section>
+     
     </div>
   );
 }

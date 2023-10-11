@@ -1,14 +1,17 @@
 import React, { useState } from "react";
-import { Input, Button } from "@nextui-org/react";
+import { Input, Button, Checkbox } from "@nextui-org/react";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { authentication } from "../../../Auth/firebase";
-
+import Lottie  from "lottie-react";
+import SignupAnimation from "../../assets/Animations/Signup.json";
 
 function Login() {
   const [loginInformation, setLoginInformation] = useState({
     email: "",
     password: "",
   });
+  const [isSelected, setIsSelected] = useState(false);
+  console.log(isSelected);
 
   function loginHandler(e) {
     const { name, value } = e.target;
@@ -20,6 +23,7 @@ async function handleLogin() {
 try{
     const { email, password } = loginInformation;
     const user = await signInWithEmailAndPassword(authentication,email,password);
+
     window.location.assign("/");
 
     
@@ -31,10 +35,20 @@ try{
 
     
 }
+function forgotPassword() {
+  console.log("forgotPassword");
+  
+}
+
   return (
-    <div className="SignUp-Container">
-      <section >
-        {/* {authentication.currentUser.email} */}
+    <div  className="SignUp-Container">
+      <div className="animation">
+        <Lottie animationData={SignupAnimation}></Lottie>
+      </div>
+      <section className="SignUp-Wrapper" >
+
+        <h1 className="login-H1">Login</h1>
+        
         <Input
           isRequired
           type="email"
@@ -55,12 +69,20 @@ try{
           value={loginInformation.password}
           onChange={loginHandler}
         />
-      </section>
-      <aside
-        style={{ display: "flex", justifyContent: "flex-end", padding: "2%" }}
-      >
-        <Button onClick={handleLogin}>SignIn</Button>
+      <aside>
+             <div style={{ display: "flex", padding: "2%" ,color:"white"}}>
+          
+                 <h1  style={{fontSize:"15px"}}onClick={forgotPassword}>  Forgot Password?</h1>
+             
+      
+               <div  >
+                 <Checkbox radius="full" color="primary"  isSelected = {isSelected} onValueChange={setIsSelected}> Remember Me?</Checkbox>
+               </div>
+             
+             </div>
       </aside>
+        <button  onClick={handleLogin} className=" login-btn">LogIn</button>
+        </section>
     </div>
   );
 }

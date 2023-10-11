@@ -11,14 +11,14 @@ import { useSelector,useDispatch } from "react-redux";
 
 function Header() {
   const [displayEmail,setDisplayEmail]= useState("")
-  console.log(displayEmail);
+
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const dispatch= useDispatch()
     const quantity = useSelector(selectCount).length
 
     function selectPageToView(list){
       const setPageToView = dispatch(selectPage(list))
-      console.log(setPageToView);
+
 
       setIsMenuOpen(false)
 

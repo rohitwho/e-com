@@ -398,19 +398,41 @@ gap:6px;
 .SignUp-Container{
   padding:2%;
  
-  height:100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-background-image: url("../public/HomePage/2.jpeg");
-background-repeat: no-repeat;
-background-position: center;
+  height:80vh;
+  display: grid;
+  /* grid-template-columns: 1fr;
+  /* grid-template-columns: 1fr ; */
 
-  
+  column-gap: 2%;
+
+
+
+
 }
 .SignUp-Wrapper{
+width:100%;
+
+align-items: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+border: 1px solid white;
+padding:2%;
+border-radius: 6px;
+text-transform: uppercase;
+font-size: large;
+font-weight: 500;
 
 
+
+}
+.animation{
+  display: none;
+}
+
+.SignUp-Wrapper > div{
+  padding-bottom: 2%;
+  /* color: #f3efe3; */
 }
 @media only screen and (min-width: 600px) {
   .HomeView {
@@ -468,10 +490,44 @@ color: #1a1a1a;
 
 }
 .Grid{
-  display:grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  display:flex;
+justify-content: space-around;
+align-self: center;
+ padding: 2%;
+  gap: 20px;
 }
+.SignUp-Container{
+  padding:2%;
+ 
+  height:80vh;
+  display: grid;
+  /* grid-template-columns: 1fr; */
+  grid-template-columns: 1fr 40% ;
+
+  column-gap: 2%;
+
+
+
+
+}
+.SignUp-Wrapper{
+  width:80%
+  
+  
+  }
+  .login-btn{
+    width:100%;
+    border: 1px solid black;
+    background: transparent;
+  }
+  .login-btn:hover{
+    background: black;
+    color: #f9f9f9;
+  }
+  .animation{
+    display: inline;
+  }
+
 .Grid-Article{
 display: flex;
 justify-content: center;
@@ -511,7 +567,7 @@ padding-bottom: 2%;
   }
 }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
       color: #213547;
       background-color: #ffffff;
