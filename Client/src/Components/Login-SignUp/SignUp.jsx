@@ -12,7 +12,9 @@ function SignUp() {
     password: "",
     displayName: "",
   });
- 
+  const [isVisible, setIsVisible] =useState(false);
+
+  const toggleVisibility = () => setIsVisible(!isVisible);
 
   function signupValueHandler(e) {
     const { name, value } = e.target;
@@ -52,6 +54,7 @@ window.location.assign("/");
             type="email"
             name="username"
             label="Username"
+            color="primary"
             variant="underlined"
             placeholder="Enter Username"
            
@@ -65,24 +68,33 @@ window.location.assign("/");
             name="email"
             label="Email"
             variant="underlined"
+            color="primary"
             placeholder="Enter Your Email"
             value={signUpInformation.email}
             onChange={signupValueHandler}
           />
           <Input
             isRequired
-            type="password"
+            type={isVisible ? "text" : "password"}
             name="password"
             label="Password"
             variant="underlined"
+            color="primary"
             placeholder="Enter Your Password"
             value={signUpInformation.password}
             onChange={signupValueHandler}
+            endContent={
+              <button className="focus:outline-none" type="button" onClick={toggleVisibility}>&#9787;</button>
+                }
+            
           />
-          <section className="Grid">
-              <div style={{fontSize:"1rem",fontWeight:"600"}}>
-                  <h1> <Link to = "/Login"> Login Instead?</Link></h1>
-              </div>
+          <section className="Form-Action">
+ 
+
+       <p>Already Have an Account? </p>  
+  
+     <Link to = "/Login"> Login </Link>
+      
           </section>
               <button  onClick={signupHandler} className=" login-btn">SignUp</button>
            </section>
