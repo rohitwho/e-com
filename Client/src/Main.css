@@ -403,7 +403,7 @@ gap:6px;
   padding:2%;
   background-image: url("/HomePage/LoginBackground.jpg");
   background-attachment:scroll;
-  /* background-position: center; */
+
   background-repeat:round;
 
   height:80vh;
@@ -415,22 +415,13 @@ gap:6px;
 
   column-gap: 2%;
 
-
-
-
 }
 .SignUp-Wrapper{
 width:100%;
-
-
-
-
-/* align-items: center; */
 display: flex;
 row-gap: 10px;
 flex-direction: column;
 justify-content: space-evenly;
-/* border: 1px solid var(--fontColor-LightScheme); */
 padding:2%;
 border-radius: 6px;
 text-transform: uppercase;
@@ -464,6 +455,8 @@ font-weight: 500;
     font-size: x-large;
   }
 }
+
+
 @media only screen and (min-width: 920px) {
   .HomeView {
     grid-template-columns: 1fr 1fr 1fr;
@@ -520,7 +513,7 @@ align-self: center;
 
   height:80vh;
   display: grid;
-  /* grid-template-columns: 1fr; */
+
   grid-template-columns: 1fr 40% ;
 
   column-gap: 2%;
@@ -531,7 +524,7 @@ align-self: center;
 }
 .SignUp-Wrapper{
   width:80%;
-  height:100%
+  height:auto;
   
   
   }

@@ -80,7 +80,7 @@ function homepage() {
           <div className="GridColumns">
             <h1 >Shop latest Deals</h1>
             <p className="DealsP">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+             Shop Latest Trends
             </p>
             <Link  className="SendButton"to="/Deals">
               <button  style={{background:"transparent",color:"white" }}>Shop Now</button>

@@ -82,7 +82,7 @@ function Header() {
             <Link href="#">Login</Link>
           </NavbarItem>
           <NavbarItem className=" flex gap-4  align-middle justify-center">
-            {/* <Avatar isBordered radius="lg" src="https://i.pravatar.cc/150?u=a04258114e29026302d" /> */}
+           
             <Dropdown className="Dropdown" placement="bottom-end">
               <DropdownTrigger>
                 <Avatar
