@@ -6,7 +6,7 @@ import {
   selectCount,
   selectSelectedProduct,
 } from "../../../slice/cartSlice";
-import { useEffect, useState } from "react";
+import { useEffect, useState,useMemo } from "react";
 import Lottie from "lottie-react";
 import EmptyCart from "../../assets/Animations/EmptyCart.json";
 
@@ -14,21 +14,25 @@ function Cart() {
   const dispatch = useDispatch();
 
   const emptyCart = useSelector(selectSelectedProduct);
-  console.log(emptyCart);
+
 
 
 
   const [checkoutItem, setCheckoutItem] = useState([]);
-  console.log(checkoutItem);
+
   const [overallTotal, setOverallTotal] = useState(0);
 
+ 
   const cartItems = useSelector(selectCount);
+
+
 
   const calculateTaxAmount = (Cost) => Math.floor((Cost * 13) / 100);
   const totalAmount = (originalAmount, addTax) =>
     Math.floor(originalAmount + addTax);
 
-  useEffect(() => {
+    useMemo(() => {
+  
     setCheckoutItem(cartItems);
   }, [cartItems]);
 

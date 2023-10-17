@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useMemo } from "react";
 import axios from "axios";
 import { Button } from "@nextui-org/react";
 import { Link } from "react-router-dom";
@@ -17,18 +17,25 @@ function MenProduct() {
       try {
         const data = await axios.get(`https://shopall-7d84df423472.herokuapp.com${pickPage}`);
 
+        if(data.status === 200){
+
           setProducts(data.data);
+        } else {
+          window.alert("An Error Ocurred While Loading the page")
+
+        }
+
    
       } catch (err) {
-        console.log(err);
+        console.log(err.message);
       }
     };
-    fetch();
+fetch()
   }, [pickPage]);
-
+  const memoizedProducts = useMemo(() => products, [products]);
   return (
     <div className="ProductMain">
-      {products?.map((list) => (
+      {memoizedProducts?.map((list) => (
         <div key={list._id} className="Product">
            <Link to={`/Product/${list._id}`}>
           <Product

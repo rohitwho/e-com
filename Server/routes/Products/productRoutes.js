@@ -1,6 +1,6 @@
 const route = require("express").Router();
 
-const { log } = require("console");
+
 const ProductList = require("../../models/products");
 
 route.get("/MenProduct", async (req, res) => {
@@ -16,15 +16,15 @@ route.get("/MenProduct", async (req, res) => {
 
 route.post("/PostProduct", async (req, res) => {
   try {
-    // const { productName, productDescription, productCategory, productPrice } =
-    //   req.body;
+    const { productName, productDescription, productCategory, productPrice } =
+      req.body;
   console.log(req.body);
 
     const postProduct = await ProductList.create({
-      productName: req.body.productName,
-      productDescription: req.body.productDescription,
-      productCategory: req.body.productCategory,
-      productPrice: req.body.productPrice
+      productName,
+      productDescription,
+      productCategory,
+      productPrice
     });
     res.status(200).json(postProduct);
   } catch (err) {

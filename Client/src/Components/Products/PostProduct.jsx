@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect , useState } from "react";
 import Form from "../FormInput/Form";
 import { Button,Select,SelectItem,Input ,Textarea} from "@nextui-org/react";
 import axios from "axios";
@@ -11,9 +11,8 @@ function PostProduct() {
     productPrice: "",
     listType: "",
   });
-  console.log(products);
-  function handleForm(e) {
-    
+  
+  function handleForm(e) { 
     const { name, value } = e.target;
     setProducts((prevProduct) => ({
       ...prevProduct,
@@ -24,9 +23,10 @@ function PostProduct() {
 
   async function submitForm() {
     const postRequest = await axios.post(
-      "http://localhost:3001/PostProduct",
+      "https://shopall-7d84df423472.herokuapp.com/PostProduct",
       products
     );
+
     if (postRequest.status === 200) {
       setProducts({
         productName: "",
@@ -46,7 +46,7 @@ function PostProduct() {
 
   return (
     <div className="gridContainer">
-      <main className="Grid">
+      <main className="Grid"  >
         <article className="Grid-Article">
           <Form
             inputType="file"
@@ -57,7 +57,7 @@ function PostProduct() {
           />
         </article>
         <section >
-          <div style={{ display: "flex", gap:"6px",}}>
+          <div style={{ display: "flex", gap:"6px"}}>
 
             <Input
       isRequired

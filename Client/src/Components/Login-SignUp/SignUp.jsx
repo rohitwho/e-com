@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Input, Button,  } from "@nextui-org/react";
+import { Input } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { authentication } from "../../../Auth/firebase";
