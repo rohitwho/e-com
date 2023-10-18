@@ -15,6 +15,7 @@ import {
   DropdownItem,
   DropdownMenu,
 } from "@nextui-org/react";
+import { useHistory } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
@@ -53,8 +54,9 @@ function Header() {
   onAuthStateChanged(authentication, (currentUser) => {
     setDisplayEmail(currentUser);
   });
+  const history = useHistory()
   function linkTo(link) {
-    window.location = link;
+    history.push = link;
   }
   return (
     <div>
@@ -122,7 +124,7 @@ function Header() {
                     key="Post"
                     onPress={() => linkTo("/Post")}
                   >
-                    <Link to="/Post">Post</Link>
+                    <Link to="/PostProduct">Post</Link>
                   </DropdownItem>
                 ) : null}
 

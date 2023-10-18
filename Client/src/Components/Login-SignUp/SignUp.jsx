@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Input } from "@nextui-org/react";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword ,GoogleAuthProvider,signInWithPopup } from "firebase/auth";
 import { authentication } from "../../../Auth/firebase";
 import Lottie  from "lottie-react";
 import SignupAnimation from "../../assets/Animations/Signup.json";
@@ -37,6 +37,12 @@ window.location.assign("/");
         window.alert(err.message)
     }
 
+    
+  }
+  const provider = new GoogleAuthProvider()
+  async function googleSignIn() {
+     const signIn = await signInWithPopup(authentication,provider)
+     const user = signIn.user
     
   }
 
@@ -94,8 +100,10 @@ window.location.assign("/");
        <p>Already Have an Account? </p>  
   
      <Link to = "/Login"> Login </Link>
+
       
           </section>
+     <button onClick={googleSignIn}>Google?</button>
               <button  onClick={signupHandler} className=" login-btn">SignUp</button>
            </section>
      
